@@ -1,268 +1,651 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XAVIER DRONEWORKS – capturando novos horizontes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    :root {
+      --bg: #f3f1ed;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e4dfd8;
+      --accent: #cf2027;
+      --accent-dark: #a9171e;
+      --accent-2: #0f6fd8;
+      --shadow: 0 14px 40px rgba(0,0,0,.08);
+      --radius: 18px;
+      --container: 1320px;
     }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background-color: #05070b;
-      color: #f5f5f5;
-      line-height: 1.6;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+      line-height: 1.65;
     }
 
-    a {
-      color: #00c3ff;
-      text-decoration: none;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      background: rgba(5,7,11,0.9);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
-
-    .logo-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo-name {
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 1rem;
-      color: #00c3ff;
-      text-transform: uppercase;
-    }
-
-    .logo-tagline {
-      font-size: 0.7rem;
-      color: #cccccc;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    nav a {
-      margin-left: 20px;
-      font-size: 0.95rem;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      padding: 60px 40px 40px;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p.sub {
-      font-size: 1.1rem;
-      color: #b0b0b0;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      border-radius: 999px;
-      border: 1px solid #00c3ff;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: 0.2s ease;
-      background: transparent;
-      color: #f5f5f5;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg,#00c3ff,#006aff);
-      border-color: transparent;
-    }
-
-    .hero-photo {
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-photo img {
-      max-width: 320px;
-      width: 100%;
-      border-radius: 24px;
-      border: 3px solid #00c3ff;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-      object-fit: cover;
-    }
-
-    main {
-      padding: 0 40px 40px;
-      max-width: 1100px;
+    .container {
+      width: min(calc(100% - 32px), var(--container));
       margin: 0 auto;
     }
 
-    section {
-      padding: 40px 0;
-      border-top: 1px solid #151822;
+    /* TOPO / NAV */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 220px;
+    }
+
+    .brand-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.9rem;
+      line-height: 1;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .brand-sub {
+      font-size: .82rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 1rem;
+    }
+
+    .menu a {
+      padding: 8px 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .menu a:hover { border-color: var(--accent); }
+
+    .nav-cta {
+      border: 2px solid #1d1d1d;
+      padding: 10px 22px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: white;
+      font-size: .9rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 22px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 0.95fr 1.2fr;
+      align-items: stretch;
+      gap: 26px;
+    }
+
+    .panel-red {
+      background: var(--accent);
+      color: white;
+      padding: 48px 38px;
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel-red::before,
+    .panel-red::after {
+      content: "";
+      position: absolute;
+      background: rgba(255,255,255,.09);
+      width: 36px;
+      height: 36px;
+    }
+    .panel-red::before { top: 26px; left: 28px; }
+    .panel-red::after { top: 86px; right: 46px; }
+
+    .eyebrow {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 1rem;
+      margin-bottom: 34px;
+      opacity: .95;
+    }
+
+    .big-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.7rem, 4vw, 4.3rem);
+      line-height: .98;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      margin: 0 0 28px;
+    }
+
+    .panel-red p {
+      font-size: 1.06rem;
+      max-width: 26ch;
+      color: rgba(255,255,255,.9);
+      margin: 0 0 18px;
+    }
+
+    .panel-photo {
+      background: #ddd;
+      min-height: 720px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .panel-text {
+      background: transparent;
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 10px 10px 2px;
+    }
+
+    .intro-mini {
+      color: #a06c62;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+
+    .side-title {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+      line-height: .98;
+      margin: 0 0 24px;
+      max-width: 14ch;
+    }
+
+    .panel-text p {
+      font-size: 1.05rem;
+      color: #4d4d4d;
+      max-width: 32ch;
+      margin: 0 0 18px;
+    }
+
+    .panel-text strong { color: #171717; }
+
+    /* SEÇÕES GENÉRICAS */
+
+    .section {
+      padding: 36px 0 20px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      margin: 0;
+      letter-spacing: .04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 55ch;
+      font-size: .98rem;
+    }
+
+    /* VÍDEOS */
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
       margin-top: 20px;
     }
 
-    h2.section-title {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
-    .about-text {
-      max-width: 700px;
-      color: #d0d0d0;
-      font-size: 0.98rem;
+    .video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #000;
     }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .portfolio-item {
-      background: #101321;
-      border-radius: 12px;
-      padding: 12px;
-      border: 1px solid #1f2333;
-    }
-
-    .portfolio-item iframe,
-    .portfolio-item img {
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      border-radius: 8px;
-      border: none;
+      height: 100%;
+      border: 0;
+    }
+
+    .card-body {
+      padding: 20px 22px 22px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 8px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.35rem;
+      letter-spacing: .04em;
+    }
+
+    .card-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .97rem;
+    }
+
+    /* GALERIA */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* CONTACTO */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      margin-top: 18px;
+      padding-bottom: 40px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 14px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      letter-spacing: .04em;
+    }
+
+    .contact-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: .97rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .contact-label {
       display: block;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #8a8a8a;
+      margin-bottom: 4px;
     }
 
-    .portfolio-item h3 {
-      margin-top: 10px;
-      font-size: 0.95rem;
+    .contact-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      word-break: break-word;
     }
 
-    .portfolio-item p {
-      font-size: 0.85rem;
-      color: #b0b0b0;
+    .cta-box {
+      background: linear-gradient(160deg, var(--accent), var(--accent-dark));
+      color: white;
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
     }
 
-    @media (max-width: 900px) {
-      .hero {
+    .cta-box h3 {
+      margin: 0 0 10px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      line-height: 1.05;
+    }
+
+    .cta-box p {
+      margin: 0 0 22px;
+      color: rgba(255,255,255,.9);
+      font-size: .98rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      background: white;
+      color: #121212;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .95rem;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 0 26px;
+      color: #6d6d6d;
+      font-size: .9rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1180px) {
+      .hero-grid {
         grid-template-columns: 1fr;
       }
-
-      .hero-photo {
-        order: -1;
+      .panel-red,
+      .panel-photo,
+      .panel-text {
+        min-height: auto;
       }
+      .panel-photo { height: 560px; }
+      .panel-red,
+      .panel-text { padding: 32px 24px; }
+      .panel-text p,
+      .side-title { max-width: none; }
+    }
 
-      header {
-        padding: 15px 20px;
+    @media (max-width: 860px) {
+      .nav {
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
       }
-
-      main {
-        padding: 0 20px 30px;
+      .menu {
+        gap: 14px;
+        font-size: .95rem;
+      }
+      .nav-cta {
+        padding: 8px 18px;
+      }
+      .panel-photo { height: 420px; }
+      .videos-grid,
+      .gallery-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="Xavier Droneworks página inicial">
+        <span class="brand-title">Xavier Droneworks</span>
+        <span class="brand-sub">Capturando novos horizontes</span>
+      </a>
 
-<header>
-  <div class="logo-wrap">
-    <div class="logo-name">XAVIER DRONEWORKS</div>
-    <div class="logo-tagline">capturando novos horizontes</div>
-  </div>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Vídeo e fotografia aérea profissional</h1>
-    <p class="sub">
-      XAVIER DRONEWORKS – capturando novos horizontes para marcas, imobiliárias e projetos turísticos.
-    </p>
-    <div class="hero-buttons">
-      <a href="#portfolio" class="btn btn-primary">Ver portefólio</a>
-      <a href="#contacto" class="btn">Pedir orçamento</a>
+      <a class="nav-cta" href="#videos">Portfólio</a>
     </div>
-  </div>
+  </header>
 
-  <div class="hero-photo">
-    <img src="image.jpg" alt="Xavier Droneworks - foto de apresentação">
-  </div>
-</section>
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- PAINEL VERMELHO -->
+        <article class="panel-red" id="sobre">
+          <div class="eyebrow">Xavier Droneworks</div>
+          <h1 class="big-title">Drone service Portugal – vídeo e fotografia aérea profissional</h1>
+          <p>
+            Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, eventos e conteúdos promocionais.
+          </p>
+          <p>
+            O objetivo é simples: criar perspetivas fortes, cinematográficas e profissionais que valorizem cada projeto.
+          </p>
+        </article>
 
-<main>
-  <section id="sobre">
-    <h2 class="section-title">Sobre mim</h2>
-    <div class="about-text">
-      <p>
-        O meu nome é Xavier e sou operador profissional de drone e criador de conteúdos visuais em Vila Nova de Gaia.
-      </p>
-      <p>
-        Produzo vídeos e fotografias aéreas com foco em qualidade, impacto visual e novas perspetivas para cada projeto.
-      </p>
-    </div>
-  </section>
+        <!-- FOTO -->
+        <div class="panel-photo">
+          <img src="https://aala1966.github.io/xavier/xavierfoto.jpg"
+               alt="Foto de apresentação de Xavier Droneworks"
+               width="800" height="1100" loading="eager" />
+        </div>
 
-  <section id="portfolio">
-    <h2 class="section-title">Portfólio</h2>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <iframe
-          src="https://www.youtube.com/embed/O87OPrsX770"
-          title="Vídeo 1"
-          allowfullscreen>
-        </iframe>
-        <h3>Projeto em vídeo 1</h3>
-        <p>Captação aérea cinematográfica com drone.</p>
+        <!-- TEXTO À DIREITA -->
+        <article class="panel-text">
+          <div class="intro-mini">O teu parceiro para imagem aérea</div>
+          <h2 class="side-title">Serviço profissional de drone em Portugal</h2>
+          <p>
+            Trabalho com foco em <strong>qualidade visual</strong>, movimentos suaves e enquadramentos fortes
+            para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.
+          </p>
+          <p>
+            Seja para promover um imóvel, um alojamento, um evento ou uma paisagem, entrego conteúdos pensados
+            para chamar atenção e transmitir profissionalismo.
+          </p>
+        </article>
       </div>
+    </section>
 
-      <div class="portfolio-item">
-        <iframe
-          src="https://www.youtube.com/embed/TyhdftHV2kQ"
-          title="Vídeo 2"
-          allowfullscreen>
-        </iframe>
-        <h3>Projeto em vídeo 2</h3>
-        <p>Perspetivas aéreas para promoção visual e comercial.</p>
+    <!-- VÍDEOS -->
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Vídeos em destaque</h2>
+          <p>Dois exemplos de trabalhos teus já integrados na página, no mesmo espírito visual da referência que mostraste.</p>
+        </div>
+
+        <div class="videos-grid">
+          <article class="card">
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/O87OPrsX770"
+                title="Vídeo drone Xavier 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h3>Projeto em destaque 01</h3>
+              <p>Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/TyhdftHV2kQ"
+                title="Vídeo drone Xavier 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h3>Projeto em destaque 02</h3>
+              <p>Imagens aéreas pensadas para promoção visual, marketing digital e valorização de espaços.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contacto">
-    <h2 class="section-title">Contacto</h2>
-    <p>Podes colocar aqui o teu email, telefone e Instagram.</p>
-  </section>
-</main>
+    <!-- GALERIA -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <h2>Fotografia aérea</h2>
+          <p>Pode começar com estas três imagens; só tens de trocar os links pelas tuas fotos reais (por exemplo, em GitHub Pages ou na mesma pasta do site).</p>
+        </div>
 
+        <div class="gallery-grid">
+          <article class="card">
+            <img class="gallery-image" src="https://aala1966.github.io/xavier/foto1.jpg" alt="Foto aérea 1">
+            <div class="card-body">
+              <h3>Foto aérea 01</h3>
+              <p>Paisagem urbana com perspetiva elevada.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="gallery-image" src="https://aala1966.github.io/xavier/foto2.jpg" alt="Foto aérea 2">
+            <div class="card-body">
+              <h3>Foto aérea 02</h3>
+              <p>Litoral e linha de costa vistos do ar.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="gallery-image" src="https://aala1966.github.io/xavier/foto3.jpg" alt="Foto aérea 3">
+            <div class="card-body">
+              <h3>Foto aérea 03</h3>
+              <p>Imóvel e envolvente em destaque.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contacto</h2>
+          <p>Dados preparados para pedidos de orçamento e mensagens diretas por WhatsApp ou email.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Fala comigo</h3>
+            <p>
+              Se precisas de vídeo ou fotografia com drone para imobiliário, turismo, empresas ou eventos,
+              envia mensagem e responderei com uma proposta adaptada ao teu projeto.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">WhatsApp / Telefone</span>
+                <span class="contact-value">
+                  <a href="https://wa.me/351926383420" target="_blank" rel="noopener noreferrer">
+                    +351 926 383 420
+                  </a>
+                </span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <span class="contact-value">
+                  <a href="mailto:xavier1999@gmail.com">xavier1999@gmail.com</a>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="cta-box">
+            <div>
+              <h3>Capturando novos horizontes</h3>
+              <p>
+                Vídeos e fotografias aéreas com identidade visual forte, pensados para impressionar logo no primeiro olhar.
+              </p>
+            </div>
+            <a class="cta-btn" href="mailto:xavier1999@gmail.com">Pedir orçamento</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 XAVIER DRONEWORKS — capturando novos horizontes.</div>
+  </footer>
 </body>
 </html>
