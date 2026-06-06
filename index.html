@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XAVIER DRONEWORKS – capturando novos horizontes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #05070b;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00c3ff;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(5,7,11,0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      color: #00c3ff;
+      text-transform: uppercase;
+    }
+
+    .logo-tagline {
+      font-size: 0.7rem;
+      color: #cccccc;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      padding: 60px 40px 40px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p.sub {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid #00c3ff;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+      background: transparent;
+      color: #f5f5f5;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,#00c3ff,#006aff);
+      border-color: transparent;
+    }
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 24px;
+      border: 3px solid #00c3ff;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      object-fit: cover;
+    }
+
+    main {
+      padding: 0 40px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 40px 0;
+      border-top: 1px solid #151822;
+      margin-top: 20px;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      max-width: 700px;
+      color: #d0d0d0;
+      font-size: 0.98rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: #101321;
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #1f2333;
+    }
+
+    .portfolio-item iframe,
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      display: block;
+    }
+
+    .portfolio-item h3 {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .portfolio-item p {
+      font-size: 0.85rem;
+      color: #b0b0b0;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      main {
+        padding: 0 20px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo-name">XAVIER DRONEWORKS</div>
+    <div class="logo-tagline">capturando novos horizontes</div>
+  </div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Vídeo e fotografia aérea profissional</h1>
+    <p class="sub">
+      XAVIER DRONEWORKS – capturando novos horizontes para marcas, imobiliárias e projetos turísticos.
+    </p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary">Ver portefólio</a>
+      <a href="#contacto" class="btn">Pedir orçamento</a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="image.jpg" alt="Xavier Droneworks - foto de apresentação">
+  </div>
+</section>
+
+<main>
+  <section id="sobre">
+    <h2 class="section-title">Sobre mim</h2>
+    <div class="about-text">
+      <p>
+        O meu nome é Xavier e sou operador profissional de drone e criador de conteúdos visuais em Vila Nova de Gaia.
+      </p>
+      <p>
+        Produzo vídeos e fotografias aéreas com foco em qualidade, impacto visual e novas perspetivas para cada projeto.
+      </p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title">Portfólio</h2>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <iframe
+          src="https://www.youtube.com/embed/O87OPrsX770"
+          title="Vídeo 1"
+          allowfullscreen>
+        </iframe>
+        <h3>Projeto em vídeo 1</h3>
+        <p>Captação aérea cinematográfica com drone.</p>
+      </div>
+
+      <div class="portfolio-item">
+        <iframe
+          src="https://www.youtube.com/embed/TyhdftHV2kQ"
+          title="Vídeo 2"
+          allowfullscreen>
+        </iframe>
+        <h3>Projeto em vídeo 2</h3>
+        <p>Perspetivas aéreas para promoção visual e comercial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p>Podes colocar aqui o teu email, telefone e Instagram.</p>
+  </section>
+</main>
+
+</body>
+</html>
