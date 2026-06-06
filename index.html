@@ -157,11 +157,15 @@
 
     .big-title {
       font-family: 'Oswald', sans-serif;
-      font-size: clamp(2.7rem, 4vw, 4.3rem);
-      line-height: .98;
+      font-size: 2.1rem;          /* mais pequena e multi-linha */
+      line-height: 1.15;
       text-transform: uppercase;
-      letter-spacing: .01em;
-      margin: 0 0 28px;
+      letter-spacing: .03em;
+      margin: 0 0 24px;
+    }
+
+    .big-title span {
+      display: block;
     }
 
     .panel-red p {
@@ -197,7 +201,7 @@
     .intro-mini {
       color: #a06c62;
       font-style: italic;
-      font-size: 1.1rem;
+      font-size: 1.25rem;  /* maior */
       margin-bottom: 18px;
     }
 
@@ -369,15 +373,14 @@
       word-break: break-word;
     }
 
+    /* FORMULÁRIO CTA */
+
     .cta-box {
       background: linear-gradient(160deg, var(--accent), var(--accent-dark));
       color: white;
       border-radius: var(--radius);
-      padding: 26px;
+      padding: 26px 24px;
       box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       min-height: 100%;
     }
 
@@ -390,22 +393,51 @@
     }
 
     .cta-box p {
-      margin: 0 0 22px;
+      margin: 0 0 18px;
       color: rgba(255,255,255,.9);
-      font-size: .98rem;
+      font-size: .96rem;
+    }
+
+    .cta-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cta-form label {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: rgba(255,255,255,.8);
+    }
+
+    .cta-form input,
+    .cta-form textarea {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: .9rem;
+      font-family: inherit;
+    }
+
+    .cta-form textarea {
+      min-height: 90px;
+      resize: vertical;
     }
 
     .cta-btn {
+      margin-top: 6px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      background: white;
+      min-height: 44px;
+      padding: 0 20px;
+      background: #ffffff;
       color: #121212;
       border-radius: 999px;
       font-weight: 800;
-      font-size: .95rem;
+      font-size: .9rem;
+      border: none;
+      cursor: pointer;
     }
 
     /* RODAPÉ */
@@ -487,12 +519,13 @@
         <!-- PAINEL VERMELHO -->
         <article class="panel-red" id="sobre">
           <div class="eyebrow">Xavier Droneworks</div>
-          <h1 class="big-title">Drone service Portugal – vídeo e fotografia aérea profissional</h1>
+          <h1 class="big-title">
+            <span>Drone,</span>
+            <span>Vídeo e</span>
+            <span>Fotografia aérea profissional</span>
+          </h1>
           <p>
             Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, eventos e conteúdos promocionais.
-          </p>
-          <p>
-            O objetivo é simples: criar perspetivas fortes, cinematográficas e profissionais que valorizem cada projeto.
           </p>
         </article>
 
@@ -512,8 +545,8 @@
             para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.
           </p>
           <p>
-            Seja para promover um imóvel, um alojamento, um evento ou uma paisagem, entrego conteúdos pensados
-            para chamar atenção e transmitir profissionalismo.
+            Seja para promover um imóvel, um alojamento, um evento, uma paisagem, ou um passeio de barco,
+            entrego conteúdos pensados para chamar atenção e transmitir profissionalismo.
           </p>
         </article>
       </div>
@@ -524,7 +557,6 @@
       <div class="container">
         <div class="section-head">
           <h2>Vídeos em destaque</h2>
-          <p>Dois exemplos de trabalhos teus já integrados na página, no mesmo espírito visual da referência que mostraste.</p>
         </div>
 
         <div class="videos-grid">
@@ -564,7 +596,6 @@
       <div class="container">
         <div class="section-head">
           <h2>Fotografia aérea</h2>
-          <p>Pode começar com estas três imagens; só tens de trocar os links pelas tuas fotos reais (por exemplo, em GitHub Pages ou na mesma pasta do site).</p>
         </div>
 
         <div class="gallery-grid">
@@ -613,7 +644,7 @@
 
             <div class="contact-list">
               <div class="contact-item">
-                <span class="contact-label">WhatsApp / Telefone</span>
+                <span class="contact-label">Telefone / WhatsApp</span>
                 <span class="contact-value">
                   <a href="https://wa.me/351926383420" target="_blank" rel="noopener noreferrer">
                     +351 926 383 420
@@ -631,13 +662,25 @@
           </article>
 
           <aside class="cta-box">
-            <div>
-              <h3>Capturando novos horizontes</h3>
-              <p>
-                Vídeos e fotografias aéreas com identidade visual forte, pensados para impressionar logo no primeiro olhar.
-              </p>
-            </div>
-            <a class="cta-btn" href="mailto:xavier1999@gmail.com">Pedir orçamento</a>
+            <h3>Envia a tua mensagem</h3>
+            <p>
+              Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.
+            </p>
+            <!-- FormSubmit (podes trocar pelo serviço que quiseres) -->
+            <form class="cta-form" action="https://formsubmit.co/xavier1999@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Pedido de orçamento - Xavier Droneworks">
+              <input type="hidden" name="_captcha" value="false">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="Nome" required>
+
+              <label for="email_form">Email</label>
+              <input type="email" id="email_form" name="Email" required>
+
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="Mensagem" placeholder="Descreve o tipo de projeto, local e datas..." required></textarea>
+
+              <button type="submit" class="cta-btn">Enviar mensagem</button>
+            </form>
           </aside>
         </div>
       </div>
