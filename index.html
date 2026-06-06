@@ -157,7 +157,7 @@
 
     .big-title {
       font-family: 'Oswald', sans-serif;
-      font-size: 2.1rem;          /* mais pequena e multi-linha */
+      font-size: 2.1rem;
       line-height: 1.15;
       text-transform: uppercase;
       letter-spacing: .03em;
@@ -201,7 +201,7 @@
     .intro-mini {
       color: #a06c62;
       font-style: italic;
-      font-size: 1.25rem;  /* maior */
+      font-size: 1.25rem;
       margin-bottom: 18px;
     }
 
@@ -371,6 +371,21 @@
       font-size: 1.05rem;
       font-weight: 700;
       word-break: break-word;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-inline {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    .icon-inline svg {
+      width: 18px;
+      height: 18px;
+      display: block;
     }
 
     /* FORMULÁRIO CTA */
@@ -646,8 +661,22 @@
               <div class="contact-item">
                 <span class="contact-label">Telefone / WhatsApp</span>
                 <span class="contact-value">
+                  <!-- ícone telefone -->
+                  <span class="icon-inline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                      <path d="M6.5 4.5 9 3l2 3-1.2 2a2 2 0 0 0 .3 2.2l2.7 2.7a2 2 0 0 0 2.2.3L17 12l3 2-1.5 3.5a3 3 0 0 1-3.1 1.8c-2.7-.3-5.4-2-7.7-4.3C6.4 12.7 4.7 10 4.4 7.3A3 3 0 0 1 6.5 4.5Z" fill="#111111"/>
+                    </svg>
+                  </span>
+                  <a href="tel:+351926383420">+351 926 383 420</a>
+                  <!-- ícone WhatsApp -->
+                  <span class="icon-inline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 3.1a8.2 8.2 0 0 0-7 12.7L4 21l5.3-1a8.2 8.2 0 1 0 2.7-16.9Z" fill="#25D366"/>
+                      <path d="M10.3 8.1c-.2-.5-.3-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.3 1 2.5c.2.3 1.8 2.8 4.3 3.8 2.1.8 2.6.7 3.1.6.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .2-1.1-.1-.2-.2-.2-.6-.4-.3-.2-1.5-.8-1.7-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.4.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.8-1.9Z" fill="#ffffff"/>
+                    </svg>
+                  </span>
                   <a href="https://wa.me/351926383420" target="_blank" rel="noopener noreferrer">
-                    +351 926 383 420
+                    WhatsApp
                   </a>
                 </span>
               </div>
