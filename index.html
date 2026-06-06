@@ -14,8 +14,8 @@
       --text: #111111;
       --muted: #666666;
       --line: #e4dfd8;
-      --accent: #cf2027;
-      --accent-dark: #a9171e;
+      --accent: #f5953b;       /* laranja pôr-do-sol */
+      --accent-dark: #d76d12;  /* laranja mais escuro */
       --accent-2: #0f6fd8;
       --shadow: 0 14px 40px rgba(0,0,0,.08);
       --radius: 18px;
@@ -52,12 +52,13 @@
     }
 
     .nav {
-      min-height: 80px;
+      min-height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       padding-block: 6px;
+      flex-wrap: wrap;
     }
 
     .brand {
@@ -69,7 +70,7 @@
 
     .brand-title {
       font-family: 'Oswald', sans-serif;
-      font-size: 1.9rem;
+      font-size: 1.8rem;
       line-height: 1;
       letter-spacing: .04em;
       text-transform: uppercase;
@@ -77,8 +78,8 @@
     }
 
     .brand-sub {
-      font-size: .82rem;
-      letter-spacing: .28em;
+      font-size: .8rem;
+      letter-spacing: .26em;
       text-transform: uppercase;
       color: #333;
     }
@@ -86,41 +87,45 @@
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
+
+    /* LÍNGUAS / ESTILO THULLIUM */
 
     .lang-switcher {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
     }
 
-    .flag-btn {
-      width: 26px;
-      height: 18px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-      overflow: hidden;
+    .lang-switcher button {
+      border: none;
+      background: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
       cursor: pointer;
-      display: inline-flex;
+      color: #333;
     }
 
-    .flag-btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .lang-switcher button.active {
+      font-weight: 700;
+      text-decoration: underline;
     }
 
     .menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       letter-spacing: .06em;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .menu a {
@@ -132,12 +137,12 @@
 
     .nav-cta {
       border: 2px solid #1d1d1d;
-      padding: 8px 18px;
+      padding: 6px 14px;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       letter-spacing: .08em;
       background: white;
-      font-size: .85rem;
+      font-size: .8rem;
       white-space: nowrap;
     }
 
@@ -149,50 +154,52 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.95fr 0.95fr 1.2fr;
+      grid-template-columns: 0.9fr 0.9fr 1.2fr;
       align-items: stretch;
       gap: 26px;
     }
 
     .panel-red {
-      background: var(--accent);
+      background: linear-gradient(150deg, var(--accent), var(--accent-dark));
       color: white;
-      padding: 48px 38px;
-      min-height: 720px;
+      padding: 40px 32px;
+      min-height: 620px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       position: relative;
       overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .panel-red::before,
     .panel-red::after {
       content: "";
       position: absolute;
-      background: rgba(255,255,255,.09);
+      background: rgba(255,255,255,.12);
       width: 36px;
       height: 36px;
     }
-    .panel-red::before { top: 26px; left: 28px; }
-    .panel-red::after { top: 86px; right: 46px; }
+    .panel-red::before { top: 20px; left: 22px; }
+    .panel-red::after { top: 76px; right: 40px; }
 
     .eyebrow {
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       letter-spacing: .08em;
-      font-size: 1rem;
-      margin-bottom: 34px;
+      font-size: 0.95rem;
+      margin-bottom: 26px;
       opacity: .95;
     }
 
     .big-title {
       font-family: 'Oswald', sans-serif;
-      font-size: 2.1rem;
+      font-size: 2rem;
       line-height: 1.15;
       text-transform: uppercase;
       letter-spacing: .03em;
-      margin: 0 0 24px;
+      margin: 0 0 18px;
     }
 
     .big-title span {
@@ -200,20 +207,41 @@
     }
 
     .panel-red p {
-      font-size: 1.06rem;
+      font-size: 1.02rem;
       max-width: 26ch;
       color: rgba(255,255,255,.9);
       margin: 0 0 18px;
     }
 
     .panel-photo {
-      background: #ddd;
-      min-height: 720px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
     }
 
-    .panel-photo img {
+    .logo-box {
+      max-width: 260px;
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: auto;
+    }
+
+    .photo-frame {
+      background: #ddd;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      max-width: 360px;
+      width: 100%;
+      height: 460px;
+    }
+
+    .photo-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -221,8 +249,7 @@
     }
 
     .panel-text {
-      background: transparent;
-      min-height: 720px;
+      min-height: 620px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -232,24 +259,24 @@
     .intro-mini {
       color: #a06c62;
       font-style: italic;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin-bottom: 18px;
     }
 
     .side-title {
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
-      font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+      font-size: clamp(2rem, 3vw, 3.2rem);
       line-height: .98;
-      margin: 0 0 24px;
+      margin: 0 0 20px;
       max-width: 14ch;
     }
 
     .panel-text p {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: #4d4d4d;
-      max-width: 32ch;
-      margin: 0 0 18px;
+      max-width: 34ch;
+      margin: 0 0 16px;
     }
 
     .panel-text strong { color: #171717; }
@@ -283,20 +310,36 @@
       font-size: .98rem;
     }
 
-    /* VÍDEOS */
+    /* VÍDEOS – CARROSSEL */
 
-    .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 20px;
+    .videos-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .videos-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+
+    .videos-track {
+      display: flex;
+      transition: transform 0.45s ease;
+    }
+
+    .video-slide {
+      min-width: 100%;
+      box-sizing: border-box;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
@@ -315,21 +358,46 @@
     }
 
     .card-body {
-      padding: 20px 22px 22px;
+      padding: 16px 18px 18px;
     }
 
     .card-body h3 {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       letter-spacing: .04em;
     }
 
     .card-body p {
       margin: 0;
       color: var(--muted);
-      font-size: .97rem;
+      font-size: .95rem;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .carousel-arrow.left { left: -12px; }
+    .carousel-arrow.right { right: -12px; }
+
+    .carousel-arrow span {
+      font-size: 1.3rem;
+      line-height: 1;
     }
 
     /* GALERIA */
@@ -418,6 +486,20 @@
       width: 18px;
       height: 18px;
       display: block;
+    }
+
+    .email-mini-photo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .email-mini-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* FORMULÁRIO CTA */
@@ -520,53 +602,38 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 960px) {
-      .nav {
-        flex-wrap: wrap;
-        align-items: flex-start;
-      }
-      .nav-right {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-      .menu {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-        gap: 14px;
-        font-size: .9rem;
-      }
-      .nav-cta {
-        padding: 6px 14px;
-      }
-    }
-
     @media (max-width: 1180px) {
       .hero-grid {
         grid-template-columns: 1fr;
       }
       .panel-red,
-      .panel-photo,
       .panel-text {
         min-height: auto;
       }
-      .panel-photo { height: 560px; }
       .panel-red,
-      .panel-text { padding: 32px 24px; }
-      .panel-text p,
-      .side-title { max-width: none; }
+      .panel-text { padding: 28px 20px; }
+      .panel-photo {
+        min-height: auto;
+        align-items: center;
+      }
     }
 
     @media (max-width: 860px) {
-      .panel-photo { height: 420px; }
-      .videos-grid,
-      .gallery-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
       .section-head {
         flex-direction: column;
         align-items: flex-start;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .carousel-arrow.left { left: 4px; }
+      .carousel-arrow.right { right: 4px; }
+      .wa-floating {
+        bottom: 12px;
+        right: 12px;
       }
     }
   </style>
@@ -580,26 +647,14 @@
       </a>
 
       <div class="nav-right">
+        <!-- Linguagens ao estilo Thullium -->
         <div class="lang-switcher" aria-label="Seleção de idioma">
-          <!-- Usa flags em PNG/SVG que preferires -->
-          <button class="flag-btn" data-lang="pt" title="Português">
-            <img src="https://flagcdn.com/w20/pt.png" alt="Português">
-          </button>
-          <button class="flag-btn" data-lang="es" title="Español">
-            <img src="https://flagcdn.com/w20/es.png" alt="Español">
-          </button>
-          <button class="flag-btn" data-lang="fr" title="Français">
-            <img src="https://flagcdn.com/w20/fr.png" alt="Français">
-          </button>
-          <button class="flag-btn" data-lang="en" title="English">
-            <img src="https://flagcdn.com/w20/gb.png" alt="English">
-          </button>
-          <button class="flag-btn" data-lang="it" title="Italiano">
-            <img src="https://flagcdn.com/w20/it.png" alt="Italiano">
-          </button>
-          <button class="flag-btn" data-lang="de" title="Deutsch">
-            <img src="https://flagcdn.com/w20/de.png" alt="Deutsch">
-          </button>
+          <button data-lang="pt" class="active">Português</button>
+          <button data-lang="es">Español</button>
+          <button data-lang="fr">Français</button>
+          <button data-lang="en">English</button>
+          <button data-lang="it">Italiano</button>
+          <button data-lang="de">Deutsch</button>
         </div>
 
         <nav class="menu" aria-label="Navegação principal">
@@ -618,7 +673,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
-        <!-- PAINEL VERMELHO -->
+        <!-- PAINEL LARANJA -->
         <article class="panel-red" id="sobre">
           <div class="eyebrow">Xavier Droneworks</div>
           <h1 class="big-title" data-i18n="hero.title">
@@ -631,11 +686,19 @@
           </p>
         </article>
 
-        <!-- FOTO -->
+        <!-- LOGO + FOTO -->
         <div class="panel-photo">
-          <img src="https://aala1966.github.io/xavier/xavierfoto.jpg"
-               alt="Foto de apresentação de Xavier Droneworks"
-               width="800" height="1100" loading="eager" />
+          <div class="logo-box">
+            <img src="https://raw.githubusercontent.com/aala1966/xavier/main/logoxavi.jpg"
+                 alt="Logotipo Xavier Droneworks">
+          </div>
+          <div class="photo-frame">
+            <img src="https://aala1966.github.io/xavier/xavierfoto.jpg"
+                 alt="Foto de apresentação de Xavier Droneworks"
+                 width="600"
+                 height="900"
+                 loading="eager" />
+          </div>
         </div>
 
         <!-- TEXTO À DIREITA -->
@@ -664,47 +727,102 @@
       </div>
     </section>
 
-    <!-- VÍDEOS -->
+    <!-- VÍDEOS – CARROSSEL -->
     <section class="section" id="videos">
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="videos.title">Vídeos em destaque</h2>
         </div>
 
-        <div class="videos-grid">
-          <article class="card">
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/O87OPrsX770"
-                title="Vídeo drone Xavier 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            </div>
-            <div class="card-body">
-              <h3 data-i18n="videos.v1Title">Passeios de barco</h3>
-              <p data-i18n="videos.v1Text">
-                Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica.
-                Um trabalho de custo simbólico, uma vez que é pago por cada elemento do grupo de participantes no passeio.
-              </p>
-            </div>
-          </article>
+        <div class="videos-wrapper">
+          <button class="carousel-arrow left" aria-label="Vídeo anterior">
+            <span>&lt;</span>
+          </button>
+          <button class="carousel-arrow right" aria-label="Próximo vídeo">
+            <span>&gt;</span>
+          </button>
 
-          <article class="card">
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/TyhdftHV2kQ"
-                title="Vídeo drone Xavier 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+          <div class="videos-carousel">
+            <div class="videos-track">
+              <!-- Slide 1 -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/O87OPrsX770"
+                      title="Vídeo drone Xavier 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v1Title">Passeios de barco</h3>
+                    <p data-i18n="videos.v1Text">
+                      Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica.
+                      Um trabalho de custo simbólico, uma vez que é pago por cada elemento do grupo de participantes no passeio.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/TyhdftHV2kQ"
+                      title="Vídeo drone Xavier 2"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v2Title">Aulas de Condução de Barco</h3>
+                    <p data-i18n="videos.v2Text">
+                      Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas.
+                      Neste caso, um grupo de alunos que quis memorizar as aulas do curso.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/TItJu6bi5Xg"
+                      title="Vídeo drone Xavier 3"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v3Title">Exploração costeira</h3>
+                    <p data-i18n="videos.v3Text">
+                      Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/Whk-w2zMFRI"
+                      title="Vídeo drone Xavier 4"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v4Title">Passeio no Douro</h3>
+                    <p data-i18n="videos.v4Text">
+                      Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
-            <div class="card-body">
-              <h3 data-i18n="videos.v2Title">Aulas de Condução de Barco</h3>
-              <p data-i18n="videos.v2Text">
-                Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas.
-                Neste caso, um grupo de alunos que quis memorizar as aulas do curso.
-              </p>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -786,6 +904,9 @@
               <div class="contact-item">
                 <span class="contact-label">E-mail</span>
                 <span class="contact-value">
+                  <span class="email-mini-photo">
+                    <img src="https://aala1966.github.io/xavier/xavierfoto.jpg" alt="Foto pequena de Xavier">
+                  </span>
                   <a href="mailto:xavier1999@gmail.com">xavier1999@gmail.com</a>
                 </span>
               </div>
@@ -830,7 +951,7 @@
   </a>
 
   <script>
-    // Textos por idioma (PT preenchido; outros podes ir traduzindo aos poucos)
+    // Textos por idioma
     const translations = {
       pt: {
         "nav.about": "Sobre",
@@ -851,6 +972,10 @@
         "videos.v1Text": "Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica. Um trabalho de custo simbólico, uma vez que é pago por cada elemento do grupo de participantes no passeio.",
         "videos.v2Title": "Aulas de Condução de Barco",
         "videos.v2Text": "Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas. Neste caso, um grupo de alunos que quis memorizar as aulas do curso.",
+        "videos.v3Title": "Exploração costeira",
+        "videos.v3Text": "Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.",
+        "videos.v4Title": "Passeio no Douro",
+        "videos.v4Text": "Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.",
         "gallery.title": "Fotografia aérea",
         "gallery.g1Title": "Eventos",
         "gallery.g1Text": "Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.",
@@ -869,7 +994,7 @@
         "contact.send": "Enviar mensagem"
       },
       es: {
-        // Preenche mais tarde, por agora fica igual ao PT
+        // Quando quiseres, vamos traduzindo
       },
       fr: {},
       en: {},
@@ -882,7 +1007,6 @@
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (!dict[key]) return;
-        // Se for título com quebras, trata como texto plano
         if (key === "hero.title") {
           const parts = dict[key].split("\n");
           el.innerHTML = parts.map(p => `<span>${p}</span>`).join("");
@@ -891,17 +1015,39 @@
         }
       });
       document.documentElement.lang = lang;
+      document.querySelectorAll(".lang-switcher button").forEach(b => b.classList.toggle("active", b.getAttribute("data-lang") === lang));
     }
 
-    document.querySelectorAll(".flag-btn").forEach(btn => {
+    document.querySelectorAll(".lang-switcher button").forEach(btn => {
       btn.addEventListener("click", () => {
         const lang = btn.getAttribute("data-lang");
         applyTranslations(lang);
       });
     });
 
-    // idioma por defeito
     applyTranslations("pt");
+
+    // Carrossel de vídeos
+    const track = document.querySelector(".videos-track");
+    const slides = Array.from(document.querySelectorAll(".video-slide"));
+    const prevBtn = document.querySelector(".carousel-arrow.left");
+    const nextBtn = document.querySelector(".carousel-arrow.right");
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
   </script>
 </body>
 </html>
