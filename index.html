@@ -74,14 +74,6 @@
       min-width: 220px;
     }
 
-    /* LOGO DISCRETO */
-    .brand-logo {
-      width: 80px;           /* tamanho reduzido */
-      height: auto;
-      margin-bottom: 4px;
-      opacity: 0.9;          /* ligeiramente discreto */
-    }
-
     .brand-title {
       font-family: 'Oswald', sans-serif;
       font-size: 1.8rem;
@@ -304,52 +296,1037 @@
       margin: 0 0 16px;
     }
 
-    /* ... resto do teu CSS original continua abaixo ... */
+    .panel-text strong { color: #171717; }
+
+    /* SEÇÕES GENÉRICAS */
+
+    .section {
+      padding: 36px 0 20px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      margin: 0;
+      letter-spacing: .04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 55ch;
+      font-size: .98rem;
+    }
+
+    /* VÍDEOS – CARROSSEL */
+
+    .videos-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .videos-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+
+    .videos-track {
+      display: flex;
+      transition: transform 0.45s ease;
+    }
+
+    .video-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 6px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      letter-spacing: .04em;
+    }
+
+    .card-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .carousel-arrow.left { left: -12px; }
+    .carousel-arrow.right { right: -12px; }
+
+    .carousel-arrow span {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    /* GALERIA – CARROSSEL */
+
+    .gallery-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .gallery-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+
+    .gallery-track {
+      display: flex;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    /* CONTACTO */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      margin-top: 18px;
+      padding-bottom: 40px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 14px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      letter-spacing: .04em;
+    }
+
+    .contact-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: .97rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #8a8a8a;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      word-break: break-word;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .icon-inline {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    .icon-inline svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    .email-mini-photo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .email-mini-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* FORMULÁRIO CTA */
+
+    .cta-box {
+      background: linear-gradient(160deg, var(--accent), var(--accent-dark));
+      color: white;
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .cta-box h3 {
+      margin: 0 0 10px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      line-height: 1.05;
+    }
+
+    .cta-box p {
+      margin: 0 0 18px;
+      color: rgba(255,255,255,.9);
+      font-size: .96rem;
+    }
+
+    .cta-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cta-form label {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: rgba(255,255,255,.8);
+    }
+
+    .cta-form input,
+    .cta-form textarea {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: .9rem;
+      font-family: inherit;
+    }
+
+    .cta-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .cta-btn {
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 20px;
+      background: #ffffff;
+      color: #121212;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* BOTÃO WHATSAPP */
+
+    .wa-floating {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 6px 18px rgba(0,0,0,.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .wa-floating svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 0 26px;
+      color: #6d6d6d;
+      font-size: .9rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1180px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .panel-red,
+      .panel-text {
+        min-height: auto;
+      }
+      .panel-red,
+      .panel-text { padding: 28px 20px; }
+      .panel-photo {
+        min-height: auto;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .carousel-arrow.left { left: 4px; }
+      .carousel-arrow.right { right: 4px; }
+      .wa-floating {
+        bottom: 12px;
+        right: 12px;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header class="topbar">
-    <div class="container">
-      <nav class="nav">
-        <div class="brand">
-          <!-- LOGO DISCRETO -->
-          <img
-            src="https://github.com/aala1966/xavier/blob/main/logoxavi.jpg?raw=true"
-            alt="Logo Xavier Droneworks"
-            class="brand-logo"
-          />
-          <div class="brand-title">XAVIER DRONEWORKS</div>
-          <div class="brand-sub">CAPTURANDO NOVOS HORIZONTES</div>
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="Xavier Droneworks página inicial">
+        <span class="brand-title">Xavier Droneworks</span>
+        <span class="brand-sub">Capturando novos horizontes</span>
+      </a>
+
+      <div class="nav-right">
+        <!-- Línguas com bandeiras estilo THULLIUM -->
+        <div class="lang-switcher" aria-label="Seleção de idioma">
+          <button class="lang-btn active" data-lang="pt" aria-label="Português">
+            <span class="fi fi-pt" aria-hidden="true"></span>
+          </button>
+          <button class="lang-btn" data-lang="es" aria-label="Español">
+            <span class="fi fi-es" aria-hidden="true"></span>
+          </button>
+          <button class="lang-btn" data-lang="fr" aria-label="Français">
+            <span class="fi fi-fr" aria-hidden="true"></span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-label="English">
+            <span class="fi fi-gb" aria-hidden="true"></span>
+          </button>
+          <button class="lang-btn" data-lang="it" aria-label="Italiano">
+            <span class="fi fi-it" aria-hidden="true"></span>
+          </button>
+          <button class="lang-btn" data-lang="de" aria-label="Deutsch">
+            <span class="fi fi-de" aria-hidden="true"></span>
+          </button>
         </div>
 
-        <div class="nav-right">
-          <div class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contacto">Contacto</a>
-          </div>
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a href="#videos" data-i18n="nav.videos">Vídeos</a>
+          <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
 
-          <div class="lang-switcher">
-            <button class="lang-btn active" aria-label="Português">
-              <span class="fi fi-pt"></span>
-            </button>
-            <button class="lang-btn" aria-label="Inglês">
-              <span class="fi fi-gb"></span>
-            </button>
-          </div>
-
-          <a href="#contacto" class="nav-cta">Peça um orçamento</a>
-        </div>
-      </nav>
+        <a class="nav-cta" href="#videos" data-i18n="nav.portfolio">Portfólio</a>
+      </div>
     </div>
   </header>
 
-  <!-- Aqui continua exatamente o resto do teu HTML original:
-       secção hero, serviços, portfolio, etc.  -->
-  <!-- Copia daqui para baixo o teu conteúdo tal como estava no ficheiro paste.txt -->
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- PAINEL LARANJA -->
+        <article class="panel-red" id="sobre">
+          <div class="eyebrow">Xavier Droneworks</div>
+          <h1 class="big-title" data-i18n="hero.title">
+            <span>Drone,</span>
+            <span>Vídeo e</span>
+            <span>Fotografia aérea profissional</span>
+          </h1>
+          <p data-i18n="hero.redText">
+            Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.
+          </p>
+        </article>
 
+        <!-- FOTO -->
+        <div class="panel-photo">
+          <div class="photo-frame">
+            <img src="https://aala1966.github.io/xavier/xavierfoto.jpg"
+                 alt="Foto de apresentação de Xavier Droneworks"
+                 width="600"
+                 height="900"
+                 loading="eager" />
+          </div>
+        </div>
+
+        <!-- TEXTO À DIREITA -->
+        <article class="panel-text">
+          <div class="intro-mini" data-i18n="hero.tagline">
+            O teu parceiro para imagem aérea
+          </div>
+          <h2 class="side-title" data-i18n="hero.sideTitle">
+            Serviço profissional de drone
+          </h2>
+          <p data-i18n="hero.p1">
+            Sou o Xavier Almeida. Trabalho com foco em <strong>qualidade visual</strong>, movimentos suaves e enquadramentos fortes
+            para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.
+          </p>
+          <p data-i18n="hero.p2">
+            Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco,
+            entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.
+          </p>
+          <p data-i18n="hero.p3">
+            Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.
+          </p>
+          <p data-i18n="hero.p4">
+            Estou localizado no Porto, mas trabalho em qualquer localização!
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VÍDEOS – CARROSSEL -->
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="videos.title">Vídeos em destaque</h2>
+        </div>
+
+        <div class="videos-wrapper">
+          <button class="carousel-arrow left" aria-label="Vídeo anterior">
+            <span>&lt;</span>
+          </button>
+          <button class="carousel-arrow right" aria-label="Próximo vídeo">
+            <span>&gt;</span>
+          </button>
+
+          <div class="videos-carousel">
+            <div class="videos-track">
+              <!-- Slide 1: Passeios de barco -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/O87OPrsX770"
+                      title="Vídeo drone Xavier 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v1Title">Passeios de barco</h3>
+                    <p data-i18n="videos.v1Text">
+                      Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica.
+                      Um trabalho de custo simbólico, uma vez que é pago por cada elemento do grupo de participantes no passeio.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 2: Exploração costeira -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/TItJu6bi5Xg"
+                      title="Vídeo drone Xavier 3"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v3Title">Exploração costeira</h3>
+                    <p data-i18n="videos.v3Text">
+                      Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 3: Passeio no Douro -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/Whk-w2zMFRI"
+                      title="Vídeo drone Xavier 4"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v4Title">Passeio no Douro</h3>
+                    <p data-i18n="videos.v4Text">
+                      Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Slide 4: Aulas de Condução de Barco -->
+              <div class="video-slide">
+                <article class="card">
+                  <div class="video-wrap">
+                    <iframe
+                      src="https://www.youtube.com/embed/TyhdftHV2kQ"
+                      title="Vídeo drone Xavier 2"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                  <div class="card-body">
+                    <h3 data-i18n="videos.v2Title">Aulas de Condução de Barco</h3>
+                    <p data-i18n="videos.v2Text">
+                      Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas.
+                      Neste caso, um grupo de alunos que quis memorizar as aulas do curso.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA – CARROSSEL -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="gallery.title">Fotografia aérea</h2>
+        </div>
+
+        <div class="gallery-wrapper">
+          <button class="carousel-arrow left gallery-left" aria-label="Imagem anterior">
+            <span>&lt;</span>
+          </button>
+          <button class="carousel-arrow right gallery-right" aria-label="Próxima imagem">
+            <span>&gt;</span>
+          </button>
+
+          <div class="gallery-carousel">
+            <div class="gallery-track">
+              <!-- Foto 1 -->
+              <div class="gallery-slide">
+                <article class="card">
+                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/porto.jpg" alt="Foto aérea - Porto">
+                  <div class="card-body">
+                    <h3 data-i18n="gallery.g1Title">Eventos</h3>
+                    <p data-i18n="gallery.g1Text">Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Foto 2 -->
+              <div class="gallery-slide">
+                <article class="card">
+                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/litoral.jpg" alt="Foto aérea - Litoral">
+                  <div class="card-body">
+                    <h3 data-i18n="gallery.g2Title">Publicidade</h3>
+                    <p data-i18n="gallery.g2Text">Litoral e linha de costa pensados para campanhas visuais e spots promocionais.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Foto 3 -->
+              <div class="gallery-slide">
+                <article class="card">
+                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/imovel.jpg" alt="Foto aérea - Imóvel">
+                  <div class="card-body">
+                    <h3 data-i18n="gallery.g3Title">Imobiliário</h3>
+                    <p data-i18n="gallery.g3Text">Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="contact.title">Contacto</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3 data-i18n="contact.subtitle">Fala comigo</h3>
+            <p data-i18n="contact.text">
+              Se precisas de vídeo ou fotografia com drone para imobiliário, turismo, empresas ou eventos,
+              envia mensagem e responderei com uma proposta adaptada ao teu projeto.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">
+                  <span class="icon-inline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                      <path d="M6.5 4.5 9 3l2 3-1.2 2a2 2 0 0 0 .3 2.2l2.7 2.7a2 2 0 0 0 2.2.3L17 12l3 2-1.5 3.5a3 3 0 0 1-3.1 1.8c-2.7-.3-5.4-2-7.7-4.3C6.4 12.7 4.7 10 4.4 7.3A3 3 0 0 1 6.5 4.5Z" fill="#111111"/>
+                    </svg>
+                  </span>
+                  Telefone /
+                  <span class="icon-inline" style="margin-left:4px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 3.1a8.2 8.2 0 0 0-7 12.7L4 21l5.3-1a8.2 8.2 0 1 0 2.7-16.9Z" fill="#25D366"/>
+                      <path d="M10.3 8.1c-.2-.5-.3-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.3 1 2.5c.2.3 1.8 2.8 4.3 3.8 2.1.8 2.6.7 3.1.6.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .2-1.1-.1-.2-.2-.2-.6-.4-.3-.2-1.5-.8-1.7-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.4.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.8-1.9Z" fill="#ffffff"/>
+                    </svg>
+                  </span>
+                  WhatsApp
+                </span>
+                <span class="contact-value">
+                  <a href="tel:+351926383420">+351 926 383 420</a>
+                  <span>·</span>
+                  <a href="https://wa.me/351926383420" target="_blank" rel="noopener noreferrer">Abrir no WhatsApp</a>
+                </span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">E-mail</span>
+                <span class="contact-value">
+                  <span class="email-mini-photo">
+                    <img src="https://aala1966.github.io/xavier/xavierfoto.jpg" alt="Foto pequena de Xavier">
+                  </span>
+                  <a href="mailto:xavier1999@gmail.com">xavier1999@gmail.com</a>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="cta-box">
+            <h3 data-i18n="contact.formTitle">Envia a tua mensagem</h3>
+            <p data-i18n="contact.formText">
+              Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.
+            </p>
+            <form class="cta-form" action="https://formsubmit.co/xavier1999@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Pedido de orçamento - Xavier Droneworks">
+              <input type="hidden" name="_captcha" value="false">
+              <label for="nome" data-i18n="contact.name">Nome</label>
+              <input type="text" id="nome" name="Nome" required>
+
+              <label for="email_form" data-i18n="contact.email">Email</label>
+              <input type="email" id="email_form" name="Email" required>
+
+              <label for="mensagem" data-i18n="contact.message">Mensagem</label>
+              <textarea id="mensagem" name="Mensagem" placeholder="Descreve o tipo de projeto, local e datas..." required></textarea>
+
+              <button type="submit" class="cta-btn" data-i18n="contact.send">Enviar mensagem</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2024 XAVIER DRONEWORKS — capturando novos horizontes.</div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/351926383420" class="wa-floating" target="_blank" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M12 3.1a8.2 8.2 0 0 0-7 12.7L4 21l5.3-1a8.2 8.2 0 1 0 2.7-16.9Z" fill="#25D366"/>
+      <path d="M10.3 8.1c-.2-.5-.3-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2s.9 2.3 1 2.5c.2.3 1.8 2.8 4.3 3.8 2.1.8 2.6.7 3.1.6.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .2-1.1-.1-.2-.2-.2-.6-.4-.3-.2-1.5-.8-1.7-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.4.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.6-1.5-.8-1.9Z" fill="#ffffff"/>
+    </svg>
+  </a>
+
+  <script>
+    // Textos por idioma
+    const translations = {
+      pt: {
+        "nav.about": "Sobre",
+        "nav.videos": "Vídeos",
+        "nav.gallery": "Galeria",
+        "nav.contact": "Contacto",
+        "nav.portfolio": "Portfólio",
+        "hero.title": "Drone,\nVídeo e\nFotografia aérea profissional",
+        "hero.redText": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
+        "hero.tagline": "O teu parceiro para imagem aérea",
+        "hero.sideTitle": "Serviço profissional de drone",
+        "hero.p1": "Sou o Xavier Almeida. Trabalho com foco em qualidade visual, movimentos suaves e enquadramentos fortes para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.",
+        "hero.p2": "Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco, entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.",
+        "hero.p3": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
+        "hero.p4": "Estou localizado no Porto, mas trabalho em qualquer localização!",
+        "videos.title": "Vídeos em destaque",
+        "videos.v1Title": "Passeios de barco",
+        "videos.v1Text": "Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica. Um trabalho de custo simbólico, uma vez que é pago por cada elemento do grupo de participantes no passeio.",
+        "videos.v2Title": "Aulas de Condução de Barco",
+        "videos.v2Text": "Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas. Neste caso, um grupo de alunos que quis memorizar as aulas do curso.",
+        "videos.v3Title": "Exploração costeira",
+        "videos.v3Text": "Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.",
+        "videos.v4Title": "Passeio no Douro",
+        "videos.v4Text": "Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.",
+        "gallery.title": "Fotografia aérea",
+        "gallery.g1Title": "Eventos",
+        "gallery.g1Text": "Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.",
+        "gallery.g2Title": "Publicidade",
+        "gallery.g2Text": "Litoral e linha de costa pensados para campanhas visuais e spots promocionais.",
+        "gallery.g3Title": "Imobiliário",
+        "gallery.g3Text": "Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.",
+        "contact.title": "Contacto",
+        "contact.subtitle": "Fala comigo",
+        "contact.text": "Se precisas de vídeo ou fotografia com drone para imobiliário, turismo, empresas ou eventos, envia mensagem e responderei com uma proposta adaptada ao teu projeto.",
+        "contact.formTitle": "Envia a tua mensagem",
+        "contact.formText": "Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.",
+        "contact.name": "Nome",
+        "contact.email": "Email",
+        "contact.message": "Mensagem",
+        "contact.send": "Enviar mensagem"
+      },
+      es: {
+        "nav.about": "Sobre mí",
+        "nav.videos": "Vídeos",
+        "nav.gallery": "Galería",
+        "nav.contact": "Contacto",
+        "nav.portfolio": "Portafolio",
+        "hero.title": "Dron,\nVídeo y\nFotografía aérea profesional",
+        "hero.redText": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
+        "hero.tagline": "Tu aliado para imagen aérea",
+        "hero.sideTitle": "Servicio profesional de dron",
+        "hero.p1": "Soy Xavier Almeida. Trabajo con foco en la calidad visual, movimientos suaves y encuadres potentes para crear vídeos y fotografías aéreas que aportan más valor a tu marca o proyecto.",
+        "hero.p2": "Ya sea para promocionar una propiedad, un alojamiento, un evento, una campaña publicitaria, un paisaje o un paseo en barco, entrego contenidos pensados para llamar la atención y transmitir profesionalidad.",
+        "hero.p3": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
+        "hero.p4": "Estoy ubicado en Oporto, pero trabajo en cualquier lugar.",
+        "videos.title": "Vídeos destacados",
+        "videos.v1Title": "Paseos en barco",
+        "videos.v1Text": "Grabación aérea con encuadres amplios, movimientos fluidos y presentación cinematográfica. Un trabajo de coste simbólico, ya que se paga por cada participante del grupo del paseo.",
+        "videos.v2Title": "Clases de conducción de barco",
+        "videos.v2Text": "Imágenes aéreas pensadas para la promoción visual, el marketing digital y la valorización de empresas. En este caso, un grupo de alumnos que quiso recordar sus clases del curso.",
+        "videos.v3Title": "Exploración costera",
+        "videos.v3Text": "Imágenes aéreas junto a la costa, ideales para promoción turística, campañas de marcas y divulgación de experiencias en el mar.",
+        "videos.v4Title": "Paseo por el Duero",
+        "videos.v4Text": "Recorridos a lo largo del Duero con foco en encuadres amplios, movimiento suave y destaque del entorno.",
+        "gallery.title": "Fotografía aérea",
+        "gallery.g1Title": "Eventos",
+        "gallery.g1Text": "Vista aérea de Oporto, captando la dinámica de los eventos y de la ciudad.",
+        "gallery.g2Title": "Publicidad",
+        "gallery.g2Text": "Litoral y línea de costa pensados para campañas visuales y spots promocionales.",
+        "gallery.g3Title": "Inmobiliaria",
+        "gallery.g3Text": "Propiedad y entorno en destaque, ideales para anuncios y presentaciones de inmuebles.",
+        "contact.title": "Contacto",
+        "contact.subtitle": "Habla conmigo",
+        "contact.text": "Si necesitas vídeo o fotografía con dron para inmobiliaria, turismo, empresas o eventos, envía un mensaje y responderé con una propuesta adaptada a tu proyecto.",
+        "contact.formTitle": "Envía tu mensaje",
+        "contact.formText": "Completa este formulario con algunos detalles de tu proyecto y recibirás la respuesta directamente en tu correo.",
+        "contact.name": "Nombre",
+        "contact.email": "Correo electrónico",
+        "contact.message": "Mensaje",
+        "contact.send": "Enviar mensaje"
+      },
+      fr: {
+        "nav.about": "À propos",
+        "nav.videos": "Vidéos",
+        "nav.gallery": "Galerie",
+        "nav.contact": "Contact",
+        "nav.portfolio": "Portfolio",
+        "hero.title": "Drone,\nVidéo et\nPhotographie aérienne professionnelle",
+        "hero.redText": "Je produis des images par drone avec un fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
+        "hero.tagline": "Votre partenaire pour l’image aérienne",
+        "hero.sideTitle": "Service professionnel de drone",
+        "hero.p1": "Je suis Xavier Almeida. Je travaille avec un souci de qualité visuelle, de mouvements fluides et de cadrages forts pour créer des vidéos et des photos aériennes qui valorisent votre marque ou votre projet.",
+        "hero.p2": "Pour la promotion d’un bien immobilier, d’un hébergement, d’un événement, d’une campagne publicitaire, d’un paysage ou d’une balade en bateau, je crée des contenus conçus pour attirer l’attention et transmettre du professionnalisme.",
+        "hero.p3": "Je produis des images par drone à fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
+        "hero.p4": "Je suis basé à Porto, mais je travaille partout.",
+        "videos.title": "Vidéos à la une",
+        "videos.v1Title": "Balades en bateau",
+        "videos.v1Text": "Captation aérienne avec cadrages larges, mouvements fluides et présentation cinématographique. Un travail à coût symbolique, partagé entre les participants à la sortie.",
+        "videos.v2Title": "Cours de conduite de bateau",
+        "videos.v2Text": "Images aériennes pensées pour la promotion visuelle, le marketing digital et la valorisation des entreprises. Ici, un groupe d’élèves souhaitait garder un souvenir de leurs cours.",
+        "videos.v3Title": "Exploration côtière",
+        "videos.v3Text": "Images aériennes le long de la côte, idéales pour la promotion touristique, les campagnes de marques et la mise en avant d’expériences en mer.",
+        "videos.v4Title": "Balade sur le Douro",
+        "videos.v4Text": "Parcours le long du Douro avec cadrages amples, mouvements doux et mise en valeur du paysage environnant.",
+        "gallery.title": "Photographie aérienne",
+        "gallery.g1Title": "Événements",
+        "gallery.g1Text": "Vue aérienne de Porto, captant la dynamique des événements et de la ville.",
+        "gallery.g2Title": "Publicité",
+        "gallery.g2Text": "Littoral et côte pensés pour des campagnes visuelles et des spots promotionnels.",
+        "gallery.g3Title": "Immobilier",
+        "gallery.g3Text": "Bien et environnement mis en avant, idéals pour les annonces et présentations immobilières.",
+        "contact.title": "Contact",
+        "contact.subtitle": "Contactez-moi",
+        "contact.text": "Si vous avez besoin de vidéo ou de photo par drone pour l’immobilier, le tourisme, les entreprises ou les événements, envoyez-moi un message et je vous répondrai avec une proposition adaptée à votre projet.",
+        "contact.formTitle": "Envoyez votre message",
+        "contact.formText": "Remplissez ce formulaire avec quelques détails sur votre projet et vous recevrez la réponse directement par email.",
+        "contact.name": "Nom",
+        "contact.email": "Email",
+        "contact.message": "Message",
+        "contact.send": "Envoyer le message"
+      },
+      en: {
+        "nav.about": "About",
+        "nav.videos": "Videos",
+        "nav.gallery": "Gallery",
+        "nav.contact": "Contact",
+        "nav.portfolio": "Portfolio",
+        "hero.title": "Drone,\nVideo and\nProfessional aerial photography",
+        "hero.redText": "I create drone images with strong visual impact for real estate, tourism, brands, advertising, events and promotional content.",
+        "hero.tagline": "Your partner for aerial imagery",
+        "hero.sideTitle": "Professional drone service",
+        "hero.p1": "I’m Xavier Almeida. I focus on visual quality, smooth movement and strong framing to create aerial videos and photos that add more value to your brand or project.",
+        "hero.p2": "Whether promoting a property, accommodation, event, advertising job, landscape or boat trip, I deliver content designed to grab attention and convey professionalism.",
+        "hero.p3": "I produce drone images with visual impact for real estate, tourism, brands, advertising, events and promotional content.",
+        "hero.p4": "I’m based in Porto, but I work anywhere.",
+        "videos.title": "Featured videos",
+        "videos.v1Title": "Boat trips",
+        "videos.v1Text": "Aerial capture with wide framing, smooth motion and cinematic presentation. A job at a symbolic cost, as it is paid per person in the group.",
+        "videos.v2Title": "Boat driving lessons",
+        "videos.v2Text": "Aerial footage created for visual promotion, digital marketing and business branding. In this case, a group of students who wanted to remember their course lessons.",
+        "videos.v3Title": "Coastal exploration",
+        "videos.v3Text": "Aerial images along the coast, ideal for tourism promotion, brand campaigns and showcasing sea experiences.",
+        "videos.v4Title": "Douro river tour",
+        "videos.v4Text": "Routes along the Douro with wide framing, smooth movement and an emphasis on the surrounding scenery.",
+        "gallery.title": "Aerial photography",
+        "gallery.g1Title": "Events",
+        "gallery.g1Text": "Aerial view over Porto, capturing the energy of events and the city.",
+        "gallery.g2Title": "Advertising",
+        "gallery.g2Text": "Coastline and seafront tailored for visual campaigns and promotional spots.",
+        "gallery.g3Title": "Real estate",
+        "gallery.g3Text": "Property and surroundings highlighted, ideal for listings and real estate presentations.",
+        "contact.title": "Contact",
+        "contact.subtitle": "Get in touch",
+        "contact.text": "If you need drone video or photography for real estate, tourism, companies or events, send a message and I’ll reply with a proposal tailored to your project.",
+        "contact.formTitle": "Send your message",
+        "contact.formText": "Fill in this form with some details about your project and you’ll receive the reply directly in your inbox.",
+        "contact.name": "Name",
+        "contact.email": "Email",
+        "contact.message": "Message",
+        "contact.send": "Send message"
+      },
+      it: {
+        "nav.about": "Chi sono",
+        "nav.videos": "Video",
+        "nav.gallery": "Galleria",
+        "nav.contact": "Contatto",
+        "nav.portfolio": "Portfolio",
+        "hero.title": "Drone,\nVideo e\nFotografia aerea professionale",
+        "hero.redText": "Realizzo immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
+        "hero.tagline": "Il tuo partner per le immagini aeree",
+        "hero.sideTitle": "Servizio professionale di drone",
+        "hero.p1": "Sono Xavier Almeida. Lavoro con attenzione alla qualità visiva, movimenti fluidi e inquadrature forti per creare video e foto aeree che danno più valore al tuo marchio o progetto.",
+        "hero.p2": "Che si tratti di promuovere un immobile, un alloggio, un evento, un lavoro pubblicitario, un paesaggio o un giro in barca, realizzo contenuti pensati per attirare l’attenzione e trasmettere professionalità.",
+        "hero.p3": "Produco immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
+        "hero.p4": "Sono basato a Porto, ma lavoro ovunque.",
+        "videos.title": "Video in evidenza",
+        "videos.v1Title": "Tour in barca",
+        "videos.v1Text": "Riprese aeree con inquadrature ampie, movimento fluido e presentazione cinematografica. Un lavoro dal costo simbolico, suddiviso tra i partecipanti.",
+        "videos.v2Title": "Lezioni di guida in barca",
+        "videos.v2Text": "Immagini aeree pensate per la promozione visiva, il marketing digitale e la valorizzazione delle aziende. In questo caso, un gruppo di allievi che voleva ricordare le lezioni del corso.",
+        "videos.v3Title": "Esplorazione costiera",
+        "videos.v3Text": "Immagini aeree lungo la costa, ideali per la promozione turistica, campagne di marchi e esperienze in mare.",
+        "videos.v4Title": "Gita sul Douro",
+        "videos.v4Text": "Percorsi lungo il Douro con inquadrature ampie, movimento dolce e attenzione al paesaggio circostante.",
+        "gallery.title": "Fotografia aerea",
+        "gallery.g1Title": "Eventi",
+        "gallery.g1Text": "Vista aerea di Porto, che coglie la dinamica degli eventi e della città.",
+        "gallery.g2Title": "Pubblicità",
+        "gallery.g2Text": "Litorale e costa pensati per campagne visive e spot promozionali.",
+        "gallery.g3Title": "Immobiliare",
+        "gallery.g3Text": "Immobile e dintorni in evidenza, ideali per annunci e presentazioni immobiliari.",
+        "contact.title": "Contatto",
+        "contact.subtitle": "Scrivimi",
+        "contact.text": "Se ti serve video o fotografia con drone per immobiliare, turismo, aziende o eventi, inviami un messaggio e risponderò con una proposta adatta al tuo progetto.",
+        "contact.formTitle": "Invia il tuo messaggio",
+        "contact.formText": "Compila questo modulo con alcuni dettagli del tuo progetto e riceverai la risposta direttamente via email.",
+        "contact.name": "Nome",
+        "contact.email": "Email",
+        "contact.message": "Messaggio",
+        "contact.send": "Invia messaggio"
+      },
+      de: {
+        "nav.about": "Über mich",
+        "nav.videos": "Videos",
+        "nav.gallery": "Galerie",
+        "nav.contact": "Kontakt",
+        "nav.portfolio": "Portfolio",
+        "hero.title": "Drohne,\nVideo und\nProfessionelle Luftfotografie",
+        "hero.redText": "Ich produziere Drohnenaufnahmen mit starkem visuellen Eindruck für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+        "hero.tagline": "Ihr Partner für Luftaufnahmen",
+        "hero.sideTitle": "Professioneller Drohnenservice",
+        "hero.p1": "Ich bin Xavier Almeida. Ich arbeite mit Fokus auf Bildqualität, sanfte Bewegungen und starke Bildausschnitte, um Luftvideos und ‑fotos zu erstellen, die Ihrer Marke oder Ihrem Projekt mehr Wert geben.",
+        "hero.p2": "Ob zur Bewerbung einer Immobilie, einer Unterkunft, einer Veranstaltung, eines Werbeprojekts, einer Landschaft oder einer Bootsfahrt – ich liefere Inhalte, die Aufmerksamkeit wecken und Professionalität vermitteln.",
+        "hero.p3": "Ich produziere Drohnenbilder mit starkem visuellen Impact für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+        "hero.p4": "Ich sitze in Porto, arbeite aber überall.",
+        "videos.title": "Ausgewählte Videos",
+        "videos.v1Title": "Bootstouren",
+        "videos.v1Text": "Luftaufnahmen mit weiten Bildausschnitten, sanften Bewegungen und filmischer Präsentation. Eine Arbeit zu symbolischen Kosten, bezahlt pro Teilnehmer der Tour.",
+        "videos.v2Title": "Bootsführerscheinkurse",
+        "videos.v2Text": "Luftaufnahmen für visuelle Promotion, digitales Marketing und Unternehmensauftritt. Hier eine Gruppe von Schülern, die ihre Kurse festhalten wollte.",
+        "videos.v3Title": "Küsten‑Erkundung",
+        "videos.v3Text": "Luftaufnahmen entlang der Küste – ideal für touristische Promotion, Markenkampagnen und Meer‑Erlebnisse.",
+        "videos.v4Title": "Douro‑Rundfahrt",
+        "videos.v4Text": "Routen entlang des Douro mit weiten Bildausschnitten, sanften Bewegungen und Fokus auf die Umgebung.",
+        "gallery.title": "Luftfotografie",
+        "gallery.g1Title": "Events",
+        "gallery.g1Text": "Luftaufnahme über Porto, die die Dynamik von Events und der Stadt einfängt.",
+        "gallery.g2Title": "Werbung",
+        "gallery.g2Text": "Küste und Uferlinie – optimiert für visuelle Kampagnen und Werbespots.",
+        "gallery.g3Title": "Immobilien",
+        "gallery.g3Text": "Immobilie und Umgebung im Fokus, ideal für Exposés und Präsentationen.",
+        "contact.title": "Kontakt",
+        "contact.subtitle": "Schreib mir",
+        "contact.text": "Wenn Sie Drohnen‑Video oder ‑Fotografie für Immobilien, Tourismus, Unternehmen oder Events benötigen, senden Sie mir eine Nachricht – ich antworte mit einem Angebot, das zu Ihrem Projekt passt.",
+        "contact.formTitle": "Nachricht senden",
+        "contact.formText": "Füllen Sie dieses Formular mit einigen Details zu Ihrem Projekt aus, und Sie erhalten die Antwort direkt per E‑Mail.",
+        "contact.name": "Name",
+        "contact.email": "E‑Mail",
+        "contact.message": "Nachricht",
+        "contact.send": "Nachricht senden"
+      }
+    };
+
+    function applyTranslations(lang) {
+      const dict = translations[lang] || translations["pt"];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (!dict[key]) return;
+        if (key === "hero.title") {
+          const parts = dict[key].split("\n");
+          el.innerHTML = parts.map(p => `<span>${p}</span>`).join("");
+        } else {
+          el.innerHTML = dict[key];
+        }
+      });
+      document.documentElement.lang = lang;
+    }
+
+    // clique nas bandeiras
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang");
+        applyTranslations(lang);
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          b.classList.toggle("active", b === btn);
+        });
+      });
+    });
+
+    // idioma inicial
+    applyTranslations("pt");
+
+    // Carrossel de vídeos
+    const vTrack = document.querySelector(".videos-track");
+    const vSlides = Array.from(document.querySelectorAll(".video-slide"));
+    const vPrev = document.querySelector(".carousel-arrow.left");
+    const vNext = document.querySelector(".carousel-arrow.right");
+    let vIndex = 0;
+
+    function updateVideoCarousel() {
+      const offset = -vIndex * 100;
+      vTrack.style.transform = `translateX(${offset}%)`;
+    }
+
+    vPrev.addEventListener("click", () => {
+      vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
+      updateVideoCarousel();
+    });
+
+    vNext.addEventListener("click", () => {
+      vIndex = (vIndex + 1) % vSlides.length;
+      updateVideoCarousel();
+    });
+
+    // Carrossel de galeria
+    const gTrack = document.querySelector(".gallery-track");
+    const gSlides = Array.from(document.querySelectorAll(".gallery-slide"));
+    const gPrev = document.querySelector(".gallery-left");
+    const gNext = document.querySelector(".gallery-right");
+    let gIndex = 0;
+
+    function updateGalleryCarousel() {
+      const offset = -gIndex * 100;
+      gTrack.style.transform = `translateX(${offset}%)`;
+    }
+
+    gPrev.addEventListener("click", () => {
+      gIndex = (gIndex - 1 + gSlides.length) % gSlides.length;
+      updateGalleryCarousel();
+    });
+
+    gNext.addEventListener("click", () => {
+      gIndex = (gIndex + 1) % gSlides.length;
+      updateGalleryCarousel();
+    });
+  </script>
 </body>
 </html>
