@@ -1015,7 +1015,7 @@
     </svg>
   </a>
 
- <script>
+<script>
   // Traduções
   const translations = {
     pt: {
@@ -1056,20 +1056,25 @@
       "videos.v3Text": "Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.",
 
       "gallery.title": "Galeria de imagens",
-      "gallery.caption1": "Passeio de barco no Douro",
-      "gallery.caption2": "Vista aérea de litoral",
-      "gallery.caption3": "Imóvel com destaque visual",
-      "gallery.caption4": "Paisagem urbana ao pôr do sol",
+      "gallery.g1Title": "Eventos",
+      "gallery.g1Text": "Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.",
+      "gallery.g2Title": "Publicidade",
+      "gallery.g2Text": "Litoral e linha de costa pensados para campanhas visuais e spots promocionais.",
+      "gallery.g3Title": "Imobiliário",
+      "gallery.g3Text": "Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.",
 
       "contact.title": "Contacto",
-      "contact.p1": "Se tens um projeto em mente ou queres saber mais sobre os serviços, entra em contacto.",
-      "contact.emailLabel": "Email:",
-      "contact.phoneLabel": "Telefone:",
-      "contact.note": "Respondo com a maior brevidade possível.",
+      "contact.subtitle": "Fala comigo",
+      "contact.text": "Se tens um projeto em mente ou queres saber mais sobre os serviços, entra em contacto.",
+      "contact.name": "Nome",
+      "contact.email": "Email",
+      "contact.message": "Mensagem",
+      "contact.formTitle": "Envia a tua mensagem",
+      "contact.formText": "Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.",
       "footer.rights": "Todos os direitos reservados."
     }
 
-    // Aqui podes manter outras línguas (en, fr, etc.) se já as tinhas
+    // Aqui poderás mais tarde acrescentar en, es, fr, etc.
   };
 
   const elementsWithDataI18n = document.querySelectorAll("[data-i18n]");
@@ -1087,15 +1092,30 @@
 
   applyTranslations(savedLang);
 
-  const langSelect = document.getElementById("lang-select");
-  if (langSelect) {
-    langSelect.value = savedLang;
-    langSelect.addEventListener("change", () => {
-      const newLang = langSelect.value;
-      localStorage.setItem("siteLang", newLang);
-      applyTranslations(newLang);
+  // Ligação das bandeiras (botões de idioma)
+  const langButtons = document.querySelectorAll(".lang-btn");
+
+  function setActiveLangButton(lang) {
+    langButtons.forEach((btn) => {
+      const btnLang = btn.getAttribute("data-lang");
+      if (btnLang === lang) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
     });
   }
+
+  setActiveLangButton(savedLang);
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      localStorage.setItem("siteLang", lang);
+      applyTranslations(lang);
+      setActiveLangButton(lang);
+    });
+  });
 
   // Carrossel de vídeos
   const vTrack = document.querySelector(".videos-track");
