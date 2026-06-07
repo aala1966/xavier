@@ -1289,27 +1289,62 @@
     // idioma inicial
     applyTranslations("pt");
 
-    // Carrossel de vídeos
-    const vTrack = document.querySelector(".videos-track");
-    const vSlides = Array.from(document.querySelectorAll(".video-slide"));
-    const vPrev = document.querySelector(".carousel-arrow.left");
-    const vNext = document.querySelector(".carousel-arrow.right");
-    let vIndex = 0;
+  <script>
+  // Carrossel de vídeos
+  const vTrack = document.querySelector(".videos-track");
+  const vSlides = Array.from(document.querySelectorAll(".video-slide"));
+  const vPrev = document.querySelector(".carousel-arrow.left");
+  const vNext = document.querySelector(".carousel-arrow.right");
+  let vIndex = 0;
 
-    function updateVideoCarousel() {
-      const offset = -vIndex * 100;
-      vTrack.style.transform = `translateX(${offset}%)`;
-    }
-
-    vPrev.addEventListener("click", () => {
-      vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
-      updateVideoCarousel();
+  // Pára todos os vídeos (reinicia os iframes)
+  function stopAllVideos() {
+    const iframes = document.querySelectorAll(".video-wrap iframe");
+    iframes.forEach((iframe) => {
+      const src = iframe.getAttribute("src");
+      iframe.setAttribute("src", src);
     });
+  }
 
-    vNext.addEventListener("click", () => {
-      vIndex = (vIndex + 1) % vSlides.length;
-      updateVideoCarousel();
-    });
+  function updateVideoCarousel() {
+    const offset = -vIndex * 100;
+    vTrack.style.transform = `translateX(${offset}%)`;
+  }
+
+  vPrev.addEventListener("click", () => {
+    stopAllVideos(); // pára o vídeo atual
+    vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
+    updateVideoCarousel();
+  });
+
+  vNext.addEventListener("click", () => {
+    stopAllVideos(); // pára o vídeo atual
+    vIndex = (vIndex + 1) % vSlides.length;
+    updateVideoCarousel();
+  });
+
+  // Carrossel da galeria (mantém o que já tinhas, se existir)
+  const gTrack = document.querySelector(".gallery-track");
+  const gSlides = Array.from(document.querySelectorAll(".gallery-slide"));
+  const gPrev = document.querySelector(".gallery-left");
+  const gNext = document.querySelector(".gallery-right");
+  let gIndex = 0;
+
+  function updateGalleryCarousel() {
+    const offset = -gIndex * 100;
+    gTrack.style.transform = `translateX(${offset}%)`;
+  }
+
+  gPrev.addEventListener("click", () => {
+    gIndex = (gIndex - 1 + gSlides.length) % gSlides.length;
+    updateGalleryCarousel();
+  });
+
+  gNext.addEventListener("click", () => {
+    gIndex = (gIndex + 1) % gSlides.length;
+    updateGalleryCarousel();
+  });
+</script>
 
     // Carrossel de galeria
     const gTrack = document.querySelector(".gallery-track");
