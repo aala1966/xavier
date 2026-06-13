@@ -46,6 +46,8 @@
       margin: 0 auto;
     }
 
+    /* TOPO / NAV */
+
     .topbar {
       position: sticky;
       top: 0;
@@ -166,6 +168,8 @@
       white-space: nowrap;
     }
 
+    /* HERO */
+
     .hero {
       padding: 22px 0 28px;
     }
@@ -199,7 +203,6 @@
       width: 36px;
       height: 36px;
     }
-
     .panel-red::before { top: 20px; left: 22px; }
     .panel-red::after { top: 76px; right: 40px; }
 
@@ -214,11 +217,11 @@
 
     .big-title {
       font-family: 'Oswald', sans-serif;
-      font-size: clamp(2.5rem, 4.2vw, 4.2rem);
-      line-height: 1.08;
+      font-size: 2rem;
+      line-height: 1.15;
       text-transform: uppercase;
-      letter-spacing: .02em;
-      margin: 0 0 20px;
+      letter-spacing: .03em;
+      margin: 0 0 16px;
     }
 
     .big-title span {
@@ -226,18 +229,18 @@
     }
 
     .panel-red p {
-      font-size: 1.08rem;
-      max-width: 28ch;
-      color: rgba(255,255,255,.92);
+      font-size: 1.02rem;
+      max-width: 26ch;
+      color: rgba(255,255,255,.9);
       margin: 0 0 14px;
     }
 
     .hero-credentials {
-      margin-top: 18px;
-      font-size: 0.98rem;
-      line-height: 1.55;
-      max-width: 30ch;
+      font-size: 1rem;
+      max-width: 29ch;
       color: rgba(255,255,255,.96);
+      margin: 8px 0 0;
+      line-height: 1.55;
     }
 
     .hero-credentials a {
@@ -248,7 +251,7 @@
     }
 
     .hero-credentials a:hover {
-      color: #fff7ef;
+      color: #fff3e7;
     }
 
     .panel-photo {
@@ -312,6 +315,8 @@
 
     .panel-text strong { color: #171717; }
 
+    /* SEÇÕES GENÉRICAS */
+
     .section {
       padding: 36px 0 20px;
     }
@@ -338,6 +343,8 @@
       max-width: 55ch;
       font-size: .98rem;
     }
+
+    /* VÍDEOS – CARROSSEL */
 
     .videos-wrapper {
       position: relative;
@@ -427,6 +434,8 @@
       line-height: 1;
     }
 
+    /* GALERIA – CARROSSEL */
+
     .gallery-wrapper {
       position: relative;
       max-width: 900px;
@@ -456,6 +465,8 @@
       height: 260px;
       object-fit: cover;
     }
+
+    /* CONTACTO */
 
     .contact-grid {
       display: grid;
@@ -542,6 +553,8 @@
       object-fit: cover;
     }
 
+    /* FORMULÁRIO CTA */
+
     .cta-box {
       background: linear-gradient(160deg, var(--accent), var(--accent-dark));
       color: white;
@@ -607,6 +620,8 @@
       cursor: pointer;
     }
 
+    /* BOTÃO WHATSAPP */
+
     .wa-floating {
       position: fixed;
       bottom: 18px;
@@ -627,12 +642,16 @@
       height: 28px;
     }
 
+    /* RODAPÉ */
+
     footer {
       border-top: 1px solid var(--line);
       padding: 16px 0 26px;
       color: #6d6d6d;
       font-size: .9rem;
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 1180px) {
       .hero-grid {
@@ -665,13 +684,9 @@
         right: 12px;
       }
 
-      .big-title {
-        font-size: clamp(2.15rem, 8vw, 3.2rem);
-      }
-
       .hero-credentials {
-        font-size: 0.94rem;
         max-width: 100%;
+        font-size: 0.96rem;
       }
     }
   </style>
@@ -731,12 +746,12 @@
           <p data-i18n="hero.redText">
             Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.
           </p>
-
           <p class="hero-credentials" data-i18n="hero.credentials">
-            Piloto profissional de Drone certificado pela
+            Piloto profissional de Drones, certificado pela
             <a href="https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx" target="_blank" rel="noopener noreferrer">ANAC</a>
             e inscrito na plataforma
-            <a href="https://www.aan.pt/unidade-AAN" target="_blank" rel="noopener noreferrer">AAN</a>.
+            <a href="https://www.aan.pt/unidade-AAN" target="_blank" rel="noopener noreferrer">AAN</a>,
+            com drones legalmente matriculados.
           </p>
         </article>
 
@@ -891,17 +906,6 @@
 
           <div class="gallery-carousel">
             <div class="gallery-track">
-
-              <div class="gallery-slide">
-                <article class="card">
-                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/imovel.jpg" alt="Foto aérea - Imóvel">
-                  <div class="card-body">
-                    <h3 data-i18n="gallery.g3Title">Imobiliário</h3>
-                    <p data-i18n="gallery.g3Text">Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.</p>
-                  </div>
-                </article>
-              </div>
-
               <div class="gallery-slide">
                 <article class="card">
                   <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/porto.jpg" alt="Foto aérea - Porto">
@@ -922,6 +926,15 @@
                 </article>
               </div>
 
+              <div class="gallery-slide">
+                <article class="card">
+                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/imovel.jpg" alt="Foto aérea - Imóvel">
+                  <div class="card-body">
+                    <h3 data-i18n="gallery.g3Title">Imobiliário</h3>
+                    <p data-i18n="gallery.g3Text">Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -1024,7 +1037,7 @@
       "nav.portfolio": "Portfólio",
       "hero.title": "Drone,\nVídeo e\nFotografia aérea profissional",
       "hero.redText": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
-      "hero.credentials": "Piloto profissional de Drone certificado pela <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito na plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
+      "hero.credentials": "Piloto profissional de Drones, certificado pela <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito na plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>, com drones legalmente matriculados.",
       "hero.tagline": "O teu parceiro para imagem aérea",
       "hero.sideTitle": "Serviço profissional de drone",
       "hero.p1": "Olá! O meu nome é Xavier. Trabalho com foco em qualidade visual, movimentos suaves e enquadramentos fortes para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.",
@@ -1065,6 +1078,7 @@
       "nav.portfolio": "Portafolio",
       "hero.title": "Dron,\nVídeo y\nFotografía aérea profesional",
       "hero.redText": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
+      "hero.credentials": "Piloto profesional de drones, certificado por la <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito en la plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>, con drones legalmente matriculados.",
       "hero.tagline": "Tu aliado para imagen aérea",
       "hero.sideTitle": "Servicio profesional de dron",
       "hero.p1": "¡Hola! Mi nombre es Xavier. Trabajo con foco en la calidad visual, movimientos suaves y encuadres potentes para crear vídeos y fotografías aéreas que aportan más valor a tu marca o proyecto.",
@@ -1105,6 +1119,7 @@
       "nav.portfolio": "Portfolio",
       "hero.title": "Drone,\nVidéo et\nPhotographie aérienne professionnelle",
       "hero.redText": "Je produis des images par drone avec un fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
+      "hero.credentials": "Pilote professionnel de drones, certifié par l’<a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> et inscrit sur la plateforme <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>, avec des drones légalement immatriculés.",
       "hero.tagline": "Votre partenaire pour l’image aérienne",
       "hero.sideTitle": "Service professionnel de drone",
       "hero.p1": "Bonjour ! Je m’appelle Xavier. Je travaille avec un souci de qualité visuelle, de mouvements fluides et de cadrages forts pour créer des vidéos et des photos aériennes qui valorisent votre marque ou votre projet.",
@@ -1119,7 +1134,7 @@
       "videos.v3Title": "Exploration côtière",
       "videos.v3Text": "Images aériennes le long de la côte, idéales pour la promotion touristique, les campagnes de marques et la mise en avant d’expériences en mer.",
       "videos.v4Title": "Balade sur le Douro",
-      "videos.v4Text": "Parcours le long du Douro con cadrages amples, mouvements doux et mise en valeur du paysage environnant.",
+      "videos.v4Text": "Parcours le long du Douro avec cadrages amples, mouvements doux et mise en valeur du paysage environnant.",
       "gallery.title": "Photographie aérienne",
       "gallery.g1Title": "Événements",
       "gallery.g1Text": "Vue aérienne de Porto, captant la dynamique des événements et de la ville.",
@@ -1145,6 +1160,7 @@
       "nav.portfolio": "Portfolio",
       "hero.title": "Drone,\nVideo and\nProfessional aerial photography",
       "hero.redText": "I create drone images with strong visual impact for real estate, tourism, brands, advertising, events and promotional content.",
+      "hero.credentials": "Professional drone pilot, certified by <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> and registered on the <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a> platform, with drones legally registered.",
       "hero.tagline": "Your partner for aerial imagery",
       "hero.sideTitle": "Professional drone service",
       "hero.p1": "Hello! My name is Xavier. I focus on visual quality, smooth movement and strong framing to create aerial videos and photos that add more value to your brand or project.",
@@ -1185,6 +1201,7 @@
       "nav.portfolio": "Portfolio",
       "hero.title": "Drone,\nVideo e\nFotografia aerea professionale",
       "hero.redText": "Realizzo immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
+      "hero.credentials": "Pilota professionista di droni, certificato da <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e registrato sulla piattaforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>, con droni legalmente immatricolati.",
       "hero.tagline": "Il tuo partner per le immagini aeree",
       "hero.sideTitle": "Servizio professionale di drone",
       "hero.p1": "Ciao! Mi chiamo Xavier. Lavoro con attenzione alla qualità visiva, movimenti fluidi e inquadrature forti per creare video e foto aeree che danno più valore al tuo marchio o progetto.",
@@ -1224,21 +1241,22 @@
       "nav.contact": "Kontakt",
       "nav.portfolio": "Portfolio",
       "hero.title": "Drohne,\nVideo und\nProfessionelle Luftfotografie",
-      "hero.redText": "Ich produziere Drohnenaufnahmen mit starkem visuellen Eindruck für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+      "hero.redText": "Ich produziere Drohnenaufnahmen mit starkem visuellen Eindruck für Immobilien, Tourismus, Marken, Werbung, Events und Promotion-Inhalte.",
+      "hero.credentials": "Professioneller Drohnenpilot, zertifiziert von der <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> und registriert auf der <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>-Plattform, mit gesetzlich registrierten Drohnen.",
       "hero.tagline": "Ihr Partner für Luftaufnahmen",
       "hero.sideTitle": "Professioneller Drohnenservice",
-      "hero.p1": "Hallo! Mein Name ist Xavier. Ich arbeite mit Fokus auf Bildqualität, sanfte Bewegungen und starke Bildausschnitte, um Luftvideos und ‑fotos zu erstellen, die Ihrer Marke oder Ihrem Projekt mehr Wert geben.",
+      "hero.p1": "Hallo! Mein Name ist Xavier. Ich arbeite mit Fokus auf Bildqualität, sanfte Bewegungen und starke Bildausschnitte, um Luftvideos und -fotos zu erstellen, die Ihrer Marke oder Ihrem Projekt mehr Wert geben.",
       "hero.p2": "Ob zur Bewerbung einer Immobilie, einer Unterkunft, einer Veranstaltung, eines Werbeprojekts, einer Landschaft oder einer Bootsfahrt – ich liefere Inhalte, die Aufmerksamkeit wecken und Professionalität vermitteln.",
-      "hero.p3": "Ich produziere Drohnenbilder mit starkem visuellen Impact für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+      "hero.p3": "Ich produziere Drohnenbilder mit starkem visuellen Impact für Immobilien, Tourismus, Marken, Werbung, Events und Promotion-Inhalte.",
       "hero.p4": "Ich sitze in Porto, arbeite aber überall.",
       "videos.title": "Ausgewählte Videos",
       "videos.v1Title": "Bootstouren",
       "videos.v1Text": "Luftaufnahmen mit weiten Bildausschnitten, sanften Bewegungen und filmischer Präsentation. Eine Arbeit zu symbolischen Kosten, bezahlt pro Teilnehmer der Tour.",
       "videos.v2Title": "Bootsführerscheinkurse",
       "videos.v2Text": "Luftaufnahmen für visuelle Promotion, digitales Marketing und Unternehmensauftritt. Hier eine Gruppe von Schülern, die ihre Kurse festhalten wollte.",
-      "videos.v3Title": "Küsten‑Erkundung",
-      "videos.v3Text": "Luftaufnahmen entlang der Küste – ideal für touristische Promotion, Markenkampagnen und Meer‑Erlebnisse.",
-      "videos.v4Title": "Douro‑Rundfahrt",
+      "videos.v3Title": "Küsten-Erkundung",
+      "videos.v3Text": "Luftaufnahmen entlang der Küste – ideal für touristische Promotion, Markenkampagnen und Meer-Erlebnisse.",
+      "videos.v4Title": "Douro-Rundfahrt",
       "videos.v4Text": "Routen entlang des Douro mit weiten Bildausschnitten, sanften Bewegungen und Fokus auf die Umgebung.",
       "gallery.title": "Luftfotografie",
       "gallery.g1Title": "Events",
@@ -1249,21 +1267,22 @@
       "gallery.g3Text": "Immobilie und Umgebung im Fokus, ideal für Exposés und Präsentationen.",
       "contact.title": "Kontakt",
       "contact.subtitle": "Schreib mir",
-      "contact.text": "Wenn Sie Drohnen‑Video oder ‑Fotografie für Immobilien, Tourismus, Unternehmen oder Events benötigen, senden Sie mir eine Nachricht – ich antworte mit einem Angebot, das zu Ihrem Projekt passt.",
+      "contact.text": "Wenn Sie Drohnen-Video oder -Fotografie für Immobilien, Tourismus, Unternehmen oder Events benötigen, senden Sie mir eine Nachricht – ich antworte mit einem Angebot, das zu Ihrem Projekt passt.",
       "contact.formTitle": "Nachricht senden",
-      "contact.formText": "Füllen Sie dieses Formular mit einigen Details zu Ihrem Projekt aus, und Sie erhalten die Antwort direkt per E‑Mail.",
+      "contact.formText": "Füllen Sie dieses Formular mit einigen Details zu Ihrem Projekt aus, und Sie erhalten die Antwort direkt per E-Mail.",
       "contact.name": "Name",
-      "contact.email": "E‑Mail",
+      "contact.email": "E-Mail",
       "contact.message": "Nachricht",
       "contact.send": "Nachricht senden"
     }
   };
 
   function applyTranslations(lang) {
-    const dict = translations[lang] || translations["pt"];
+    const dict = translations[lang] || translations.pt;
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       if (!dict[key]) return;
+
       if (key === "hero.title") {
         const parts = dict[key].split("\n");
         el.innerHTML = parts.map(p => `<span>${p}</span>`).join("");
@@ -1271,6 +1290,7 @@
         el.innerHTML = dict[key];
       }
     });
+
     document.documentElement.lang = lang;
   }
 
