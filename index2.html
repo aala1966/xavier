@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XAVIER DRONEWORKS – capturando novos horizontes</title>
 
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Bandeiras (flag-icons) igual ao THULLIUM -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
 
   <style>
@@ -636,17 +638,12 @@
       .hero-grid {
         grid-template-columns: 1fr;
       }
-
       .panel-red,
       .panel-text {
         min-height: auto;
       }
-
       .panel-red,
-      .panel-text {
-        padding: 28px 20px;
-      }
-
+      .panel-text { padding: 28px 20px; }
       .panel-photo {
         min-height: auto;
         align-items: center;
@@ -658,14 +655,11 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
       .contact-grid {
         grid-template-columns: 1fr;
       }
-
       .carousel-arrow.left { left: 4px; }
       .carousel-arrow.right { right: 4px; }
-
       .wa-floating {
         bottom: 12px;
         right: 12px;
@@ -729,13 +723,11 @@
       <div class="container hero-grid">
         <article class="panel-red" id="sobre">
           <div class="eyebrow">Xavier Droneworks</div>
-
           <h1 class="big-title" data-i18n="hero.title">
             <span>Drone,</span>
             <span>Vídeo e</span>
             <span>Fotografia aérea profissional</span>
           </h1>
-
           <p data-i18n="hero.redText">
             Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.
           </p>
@@ -750,13 +742,11 @@
 
         <div class="panel-photo">
           <div class="photo-frame">
-            <img
-              src="https://aala1966.github.io/xavier/xavierfoto.jpg"
-              alt="Foto de apresentação de Xavier Droneworks"
-              width="600"
-              height="900"
-              loading="eager"
-            />
+            <img src="https://aala1966.github.io/xavier/xavierfoto.jpg"
+                 alt="Foto de apresentação de Xavier Droneworks"
+                 width="600"
+                 height="900"
+                 loading="eager" />
           </div>
         </div>
 
@@ -764,23 +754,20 @@
           <div class="intro-mini" data-i18n="hero.tagline">
             O teu parceiro para imagem aérea
           </div>
-
           <h2 class="side-title" data-i18n="hero.sideTitle">
             Serviço profissional de drone
           </h2>
-
           <p data-i18n="hero.p1">
-            O meu nome é Xavier. Trabalho com foco em <strong>qualidade visual</strong>, movimentos suaves e enquadramentos fortes para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.
+            O meu nome é Xavier. Trabalho com foco em <strong>qualidade visual</strong>, movimentos suaves e enquadramentos fortes
+            para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.
           </p>
-
           <p data-i18n="hero.p2">
-            Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco, entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.
+            Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco,
+            entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.
           </p>
-
           <p data-i18n="hero.p3">
             Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.
           </p>
-
           <p data-i18n="hero.p4">
             Estou localizado no Porto, mas trabalho em qualquer localização!
           </p>
@@ -796,10 +783,10 @@
 
         <div class="videos-wrapper">
           <button class="carousel-arrow left" aria-label="Vídeo anterior">
-            <span>&lt;</span>
+            <span><</span>
           </button>
           <button class="carousel-arrow right" aria-label="Próximo vídeo">
-            <span>&gt;</span>
+            <span>></span>
           </button>
 
           <div class="videos-carousel">
@@ -904,6 +891,17 @@
 
           <div class="gallery-carousel">
             <div class="gallery-track">
+
+              <div class="gallery-slide">
+                <article class="card">
+                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/imovel.jpg" alt="Foto aérea - Imóvel">
+                  <div class="card-body">
+                    <h3 data-i18n="gallery.g3Title">Imobiliário</h3>
+                    <p data-i18n="gallery.g3Text">Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.</p>
+                  </div>
+                </article>
+              </div>
+
               <div class="gallery-slide">
                 <article class="card">
                   <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/porto.jpg" alt="Foto aérea - Porto">
@@ -924,15 +922,6 @@
                 </article>
               </div>
 
-              <div class="gallery-slide">
-                <article class="card">
-                  <img class="gallery-image" src="https://raw.githubusercontent.com/aala1966/xavier/main/imovel.jpg" alt="Foto aérea - Imóvel">
-                  <div class="card-body">
-                    <h3 data-i18n="gallery.g3Title">Imobiliário</h3>
-                    <p data-i18n="gallery.g3Text">Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.</p>
-                  </div>
-                </article>
-              </div>
             </div>
           </div>
         </div>
@@ -997,7 +986,6 @@
             <form class="cta-form" action="https://formsubmit.co/xavier1999@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="Pedido de orçamento - Xavier Droneworks">
               <input type="hidden" name="_captcha" value="false">
-
               <label for="nome" data-i18n="contact.name">Nome</label>
               <input type="text" id="nome" name="Nome" required>
 
@@ -1026,346 +1014,337 @@
     </svg>
   </a>
 
-  <script>
-    const translations = {
-      pt: {
-        "nav.about": "Sobre",
-        "nav.videos": "Vídeos",
-        "nav.gallery": "Galeria",
-        "nav.contact": "Contacto",
-        "nav.portfolio": "Portfólio",
-        "hero.title": "Drone,\nVídeo e\nFotografia aérea profissional",
-        "hero.redText": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
-        "hero.credentials": "Piloto profissional de Drone certificado pela <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito na plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
-        "hero.tagline": "O teu parceiro para imagem aérea",
-        "hero.sideTitle": "Serviço profissional de drone",
-        "hero.p1": "Olá! O meu nome é Xavier. Trabalho com foco em qualidade visual, movimentos suaves e enquadramentos fortes para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.",
-        "hero.p2": "Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco, entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.",
-        "hero.p3": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
-        "hero.p4": "Estou localizado no Porto, mas trabalho em qualquer localização!",
-        "videos.title": "Vídeos em destaque",
-        "videos.v1Title": "Passeios de barco",
-        "videos.v1Text": "Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica. Um trabalho de custo simbólico, uma vez que é pago dividido por cada elemento do grupo de participantes no passeio.",
-        "videos.v2Title": "Aulas de Condução de Barco",
-        "videos.v2Text": "Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas. Neste caso, um grupo de alunos que quis memorizar as aulas do curso.",
-        "videos.v3Title": "Exploração costeira",
-        "videos.v3Text": "Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.",
-        "videos.v4Title": "Passeio no Douro",
-        "videos.v4Text": "Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.",
-        "gallery.title": "Fotografia aérea",
-        "gallery.g1Title": "Eventos",
-        "gallery.g1Text": "Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.",
-        "gallery.g2Title": "Publicidade",
-        "gallery.g2Text": "Litoral e linha de costa pensados para campanhas visuais e spots promocionais.",
-        "gallery.g3Title": "Imobiliário",
-        "gallery.g3Text": "Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.",
-        "contact.title": "Contacto",
-        "contact.subtitle": "Fala comigo",
-        "contact.text": "Se precisas de vídeo ou fotografia com drone para imobiliário, turismo, empresas ou eventos, envia mensagem e responderei com uma proposta adaptada ao teu projeto.",
-        "contact.formTitle": "Envia a tua mensagem",
-        "contact.formText": "Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.",
-        "contact.name": "Nome",
-        "contact.email": "Email",
-        "contact.message": "Mensagem",
-        "contact.send": "Enviar mensagem"
-      },
-      es: {
-        "nav.about": "Sobre mí",
-        "nav.videos": "Vídeos",
-        "nav.gallery": "Galería",
-        "nav.contact": "Contacto",
-        "nav.portfolio": "Portafolio",
-        "hero.title": "Dron,\nVídeo y\nFotografía aérea profesional",
-        "hero.redText": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
-        "hero.credentials": "Piloto profesional de dron certificado por la <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito en la plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
-        "hero.tagline": "Tu aliado para imagen aérea",
-        "hero.sideTitle": "Servicio profesional de dron",
-        "hero.p1": "¡Hola! Mi nombre es Xavier. Trabajo con foco en la calidad visual, movimientos suaves y encuadres potentes para crear vídeos y fotografías aéreas que aportan más valor a tu marca o proyecto.",
-        "hero.p2": "Ya sea para promocionar una propiedad, un alojamiento, un evento, una campaña publicitaria, un paisaje o un paseo en barco, entrego contenidos pensados para llamar la atención y transmitir profesionalidad.",
-        "hero.p3": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
-        "hero.p4": "Estoy ubicado en Oporto, pero trabajo en cualquier lugar.",
-        "videos.title": "Vídeos destacados",
-        "videos.v1Title": "Paseos en barco",
-        "videos.v1Text": "Grabación aérea con encuadres amplios, movimientos fluidos y presentación cinematográfica. Un trabajo de coste simbólico, ya que se paga por cada participante del grupo del paseo.",
-        "videos.v2Title": "Clases de conducción de barco",
-        "videos.v2Text": "Imágenes aéreas pensadas para la promoción visual, el marketing digital y la valorización de empresas. En este caso, un grupo de alumnos que quiso recordar sus clases del curso.",
-        "videos.v3Title": "Exploración costera",
-        "videos.v3Text": "Imágenes aéreas junto a la costa, ideales para promoción turística, campañas de marcas y divulgación de experiencias en el mar.",
-        "videos.v4Title": "Paseo por el Duero",
-        "videos.v4Text": "Recorridos a lo largo del Duero con foco en encuadres amplios, movimiento suave y destaque del entorno.",
-        "gallery.title": "Fotografía aérea",
-        "gallery.g1Title": "Eventos",
-        "gallery.g1Text": "Vista aérea de Oporto, captando la dinámica de los eventos y de la ciudad.",
-        "gallery.g2Title": "Publicidad",
-        "gallery.g2Text": "Litoral y línea de costa pensados para campañas visuales y spots promocionales.",
-        "gallery.g3Title": "Inmobiliaria",
-        "gallery.g3Text": "Propiedad y entorno en destaque, ideales para anuncios y presentaciones de inmuebles.",
-        "contact.title": "Contacto",
-        "contact.subtitle": "Habla conmigo",
-        "contact.text": "Si necesitas vídeo o fotografía con dron para inmobiliaria, turismo, empresas o eventos, envía un mensaje y responderé con una propuesta adaptada a tu proyecto.",
-        "contact.formTitle": "Envía tu mensaje",
-        "contact.formText": "Completa este formulario con algunos detalles de tu proyecto y recibirás la respuesta directamente en tu correo.",
-        "contact.name": "Nombre",
-        "contact.email": "Correo electrónico",
-        "contact.message": "Mensaje",
-        "contact.send": "Enviar mensaje"
-      },
-      fr: {
-        "nav.about": "À propos",
-        "nav.videos": "Vidéos",
-        "nav.gallery": "Galerie",
-        "nav.contact": "Contact",
-        "nav.portfolio": "Portfolio",
-        "hero.title": "Drone,\nVidéo et\nPhotographie aérienne professionnelle",
-        "hero.redText": "Je produis des images par drone avec un fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
-        "hero.credentials": "Pilote professionnel de drone certifié par l’<a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> et inscrit sur la plateforme <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
-        "hero.tagline": "Votre partenaire pour l’image aérienne",
-        "hero.sideTitle": "Service professionnel de drone",
-        "hero.p1": "Bonjour ! Je m’appelle Xavier. Je travaille avec un souci de qualité visuelle, de mouvements fluides et de cadrages forts pour créer des vidéos et des photos aériennes qui valorisent votre marque ou votre projet.",
-        "hero.p2": "Pour la promotion d’un bien immobilier, d’un hébergement, d’un événement, d’une campagne publicitaire, d’un paysage ou d’une balade en bateau, je crée des contenus conçus pour attirer l’attention et transmettre du professionnalisme.",
-        "hero.p3": "Je produis des images par drone à fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
-        "hero.p4": "Je suis basé à Porto, mais je travaille partout.",
-        "videos.title": "Vidéos à la une",
-        "videos.v1Title": "Balades en bateau",
-        "videos.v1Text": "Captation aérienne avec cadrages larges, mouvements fluides et présentation cinématographique. Un travail à coût symbolique, partagé entre les participants à la sortie.",
-        "videos.v2Title": "Cours de conduite de bateau",
-        "videos.v2Text": "Images aériennes pensées pour la promotion visuelle, le marketing digital et la valorisation des entreprises. Ici, un groupe d’élèves souhaitait garder un souvenir de leurs cours.",
-        "videos.v3Title": "Exploration côtière",
-        "videos.v3Text": "Images aériennes le long de la côte, idéales pour la promotion touristique, les campagnes de marques et la mise en avant d’expériences en mer.",
-        "videos.v4Title": "Balade sur le Douro",
-        "videos.v4Text": "Parcours le long du Douro avec cadrages amples, mouvements doux et mise en valeur du paysage environnant.",
-        "gallery.title": "Photographie aérienne",
-        "gallery.g1Title": "Événements",
-        "gallery.g1Text": "Vue aérienne de Porto, captant la dynamique des événements et de la ville.",
-        "gallery.g2Title": "Publicité",
-        "gallery.g2Text": "Littoral et côte pensés pour des campagnes visuelles et des spots promotionnels.",
-        "gallery.g3Title": "Immobilier",
-        "gallery.g3Text": "Bien et environnement mis en avant, idéals pour les annonces et présentations immobilières.",
-        "contact.title": "Contact",
-        "contact.subtitle": "Contactez-moi",
-        "contact.text": "Si vous avez besoin de vidéo ou de photo par drone pour l’immobilier, le tourisme, les entreprises ou les événements, envoyez-moi un message et je vous répondrai avec une proposition adaptée à votre projet.",
-        "contact.formTitle": "Envoyez votre message",
-        "contact.formText": "Remplissez ce formulaire avec quelques détails sur votre projet et vous recevrez la réponse directement par email.",
-        "contact.name": "Nom",
-        "contact.email": "Email",
-        "contact.message": "Message",
-        "contact.send": "Envoyer le message"
-      },
-      en: {
-        "nav.about": "About",
-        "nav.videos": "Videos",
-        "nav.gallery": "Gallery",
-        "nav.contact": "Contact",
-        "nav.portfolio": "Portfolio",
-        "hero.title": "Drone,\nVideo and\nProfessional aerial photography",
-        "hero.redText": "I create drone images with strong visual impact for real estate, tourism, brands, advertising, events and promotional content.",
-        "hero.credentials": "Professional drone pilot certified by <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> and registered on the <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a> platform.",
-        "hero.tagline": "Your partner for aerial imagery",
-        "hero.sideTitle": "Professional drone service",
-        "hero.p1": "Hello! My name is Xavier. I focus on visual quality, smooth movement and strong framing to create aerial videos and photos that add more value to your brand or project.",
-        "hero.p2": "Whether promoting a property, accommodation, event, advertising job, landscape or boat trip, I deliver content designed to grab attention and convey professionalism.",
-        "hero.p3": "I produce drone images with visual impact for real estate, tourism, brands, advertising, events and promotional content.",
-        "hero.p4": "I’m based in Porto, but I work anywhere.",
-        "videos.title": "Featured videos",
-        "videos.v1Title": "Boat trips",
-        "videos.v1Text": "Aerial capture with wide framing, smooth motion and cinematic presentation. A job at a symbolic cost, as it is paid per person in the group.",
-        "videos.v2Title": "Boat driving lessons",
-        "videos.v2Text": "Aerial footage created for visual promotion, digital marketing and business branding. In this case, a group of students who wanted to remember their course lessons.",
-        "videos.v3Title": "Coastal exploration",
-        "videos.v3Text": "Aerial images along the coast, ideal for tourism promotion, brand campaigns and showcasing sea experiences.",
-        "videos.v4Title": "Douro river tour",
-        "videos.v4Text": "Routes along the Douro with wide framing, smooth movement and an emphasis on the surrounding scenery.",
-        "gallery.title": "Aerial photography",
-        "gallery.g1Title": "Events",
-        "gallery.g1Text": "Aerial view over Porto, capturing the energy of events and the city.",
-        "gallery.g2Title": "Advertising",
-        "gallery.g2Text": "Coastline and seafront tailored for visual campaigns and promotional spots.",
-        "gallery.g3Title": "Real estate",
-        "gallery.g3Text": "Property and surroundings highlighted, ideal for listings and real estate presentations.",
-        "contact.title": "Contact",
-        "contact.subtitle": "Get in touch",
-        "contact.text": "If you need drone video or photography for real estate, tourism, companies or events, send a message and I’ll reply with a proposal tailored to your project.",
-        "contact.formTitle": "Send your message",
-        "contact.formText": "Fill in this form with some details about your project and you’ll receive the reply directly in your inbox.",
-        "contact.name": "Name",
-        "contact.email": "Email",
-        "contact.message": "Message",
-        "contact.send": "Send message"
-      },
-      it: {
-        "nav.about": "Chi sono",
-        "nav.videos": "Video",
-        "nav.gallery": "Galleria",
-        "nav.contact": "Contatto",
-        "nav.portfolio": "Portfolio",
-        "hero.title": "Drone,\nVideo e\nFotografia aerea professionale",
-        "hero.redText": "Realizzo immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
-        "hero.credentials": "Pilota professionale di drone certificato da <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e iscritto alla piattaforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
-        "hero.tagline": "Il tuo partner per le immagini aeree",
-        "hero.sideTitle": "Servizio professionale di drone",
-        "hero.p1": "Ciao! Mi chiamo Xavier. Lavoro con attenzione alla qualità visiva, movimenti fluidi e inquadrature forti per creare video e foto aeree che danno più valore al tuo marchio o progetto.",
-        "hero.p2": "Che si tratti di promuovere un immobile, un alloggio, un evento, un lavoro pubblicitario, un paesaggio o un giro in barca, realizzo contenuti pensati per attirare l’attenzione e trasmettere professionalità.",
-        "hero.p3": "Produco immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
-        "hero.p4": "Sono basato a Porto, ma lavoro ovunque.",
-        "videos.title": "Video in evidenza",
-        "videos.v1Title": "Tour in barca",
-        "videos.v1Text": "Riprese aeree con inquadrature ampie, movimento fluido e presentazione cinematografica. Un lavoro dal costo simbolico, suddiviso tra i partecipanti.",
-        "videos.v2Title": "Lezioni di guida in barca",
-        "videos.v2Text": "Immagini aeree pensate per la promozione visiva, il marketing digitale e la valorizzazione delle aziende. In questo caso, un gruppo di allievi che voleva ricordare le lezioni del corso.",
-        "videos.v3Title": "Esplorazione costiera",
-        "videos.v3Text": "Immagini aeree lungo la costa, ideali per la promozione turistica, campagne di marchi e esperienze in mare.",
-        "videos.v4Title": "Gita sul Douro",
-        "videos.v4Text": "Percorsi lungo il Douro con inquadrature ampie, movimento dolce e attenzione al paesaggio circostante.",
-        "gallery.title": "Fotografia aerea",
-        "gallery.g1Title": "Eventi",
-        "gallery.g1Text": "Vista aerea di Porto, che coglie la dinamica degli eventi e della città.",
-        "gallery.g2Title": "Pubblicità",
-        "gallery.g2Text": "Litorale e costa pensati per campagne visive e spot promozionali.",
-        "gallery.g3Title": "Immobiliare",
-        "gallery.g3Text": "Immobile e dintorni in evidenza, ideali per annunci e presentazioni immobiliari.",
-        "contact.title": "Contatto",
-        "contact.subtitle": "Scrivimi",
-        "contact.text": "Se ti serve video o fotografia con drone per immobiliare, turismo, aziende o eventi, inviami un messaggio e risponderò con una proposta adatta al tuo progetto.",
-        "contact.formTitle": "Invia il tuo messaggio",
-        "contact.formText": "Compila questo modulo con alcuni dettagli del tuo progetto e riceverai la risposta direttamente via email.",
-        "contact.name": "Nome",
-        "contact.email": "Email",
-        "contact.message": "Messaggio",
-        "contact.send": "Invia messaggio"
-      },
-      de: {
-        "nav.about": "Über mich",
-        "nav.videos": "Videos",
-        "nav.gallery": "Galerie",
-        "nav.contact": "Kontakt",
-        "nav.portfolio": "Portfolio",
-        "hero.title": "Drohne,\nVideo und\nProfessionelle Luftfotografie",
-        "hero.redText": "Ich produziere Drohnenaufnahmen mit starkem visuellen Eindruck für Immobilien, Tourismus, Marken, Werbung, Events und Promotion-Inhalte.",
-        "hero.credentials": "Professioneller Drohnenpilot, zertifiziert von <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> und registriert auf der Plattform <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
-        "hero.tagline": "Ihr Partner für Luftaufnahmen",
-        "hero.sideTitle": "Professioneller Drohnenservice",
-        "hero.p1": "Hallo! Mein Name ist Xavier. Ich arbeite mit Fokus auf Bildqualität, sanfte Bewegungen und starke Bildausschnitte, um Luftvideos und -fotos zu erstellen, die Ihrer Marke oder Ihrem Projekt mehr Wert geben.",
-        "hero.p2": "Ob zur Bewerbung einer Immobilie, einer Unterkunft, einer Veranstaltung, eines Werbeprojekts, einer Landschaft oder einer Bootsfahrt – ich liefere Inhalte, die Aufmerksamkeit wecken und Professionalität vermitteln.",
-        "hero.p3": "Ich produziere Drohnenbilder mit starkem visuellen Impact für Immobilien, Tourismus, Marken, Werbung, Events und Promotion-Inhalte.",
-        "hero.p4": "Ich sitze in Porto, arbeite aber überall.",
-        "videos.title": "Ausgewählte Videos",
-        "videos.v1Title": "Bootstouren",
-        "videos.v1Text": "Luftaufnahmen mit weiten Bildausschnitten, sanften Bewegungen und filmischer Präsentation. Eine Arbeit zu symbolischen Kosten, bezahlt pro Teilnehmer der Tour.",
-        "videos.v2Title": "Bootsführerscheinkurse",
-        "videos.v2Text": "Luftaufnahmen für visuelle Promotion, digitales Marketing und Unternehmensauftritt. Hier eine Gruppe von Schülern, die ihre Kurse festhalten wollte.",
-        "videos.v3Title": "Küsten-Erkundung",
-        "videos.v3Text": "Luftaufnahmen entlang der Küste – ideal für touristische Promotion, Markenkampagnen und Meer-Erlebnisse.",
-        "videos.v4Title": "Douro-Rundfahrt",
-        "videos.v4Text": "Routen entlang des Douro mit weiten Bildausschnitten, sanften Bewegungen und Fokus auf die Umgebung.",
-        "gallery.title": "Luftfotografie",
-        "gallery.g1Title": "Events",
-        "gallery.g1Text": "Luftaufnahme über Porto, die die Dynamik von Events und der Stadt einfängt.",
-        "gallery.g2Title": "Werbung",
-        "gallery.g2Text": "Küste und Uferlinie – optimiert für visuelle Kampagnen und Werbespots.",
-        "gallery.g3Title": "Immobilien",
-        "gallery.g3Text": "Immobilie und Umgebung im Fokus, ideal für Exposés und Präsentationen.",
-        "contact.title": "Kontakt",
-        "contact.subtitle": "Schreib mir",
-        "contact.text": "Wenn Sie Drohnen-Video oder -Fotografie für Immobilien, Tourismus, Unternehmen oder Events benötigen, senden Sie mir eine Nachricht – ich antworte mit einem Angebot, das zu Ihrem Projekt passt.",
-        "contact.formTitle": "Nachricht senden",
-        "contact.formText": "Füllen Sie dieses Formular mit einigen Details zu Ihrem Projekt aus, und Sie erhalten die Antwort direkt per E-Mail.",
-        "contact.name": "Name",
-        "contact.email": "E-Mail",
-        "contact.message": "Nachricht",
-        "contact.send": "Nachricht senden"
-      }
-    };
-
-    function applyTranslations(lang) {
-      const dict = translations[lang] || translations["pt"];
-
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (!dict[key]) return;
-
-        if (key === "hero.title") {
-          const parts = dict[key].split("\n");
-          el.innerHTML = parts.map(p => `<span>${p}</span>`).join("");
-        } else {
-          el.innerHTML = dict[key];
-        }
-      });
-
-      document.documentElement.lang = lang;
+<script>
+  const translations = {
+    pt: {
+      "nav.about": "Sobre",
+      "nav.videos": "Vídeos",
+      "nav.gallery": "Galeria",
+      "nav.contact": "Contacto",
+      "nav.portfolio": "Portfólio",
+      "hero.title": "Drone,\nVídeo e\nFotografia aérea profissional",
+      "hero.redText": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
+      "hero.credentials": "Piloto profissional de Drone certificado pela <a href=\"https://www.anac.pt/vPT/Generico/ANAC/Paginas/EntradadeCanal.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">ANAC</a> e inscrito na plataforma <a href=\"https://www.aan.pt/unidade-AAN\" target=\"_blank\" rel=\"noopener noreferrer\">AAN</a>.",
+      "hero.tagline": "O teu parceiro para imagem aérea",
+      "hero.sideTitle": "Serviço profissional de drone",
+      "hero.p1": "Olá! O meu nome é Xavier. Trabalho com foco em qualidade visual, movimentos suaves e enquadramentos fortes para criar vídeos e fotografias aéreas que dão mais valor à tua marca ou projeto.",
+      "hero.p2": "Seja para promover um imóvel, um alojamento, um evento, um trabalho publicitário, uma paisagem, ou um passeio de barco, entrego conteúdos pensados para chamar a atenção e transmitir profissionalismo.",
+      "hero.p3": "Produzo imagens de drone com impacto visual para imobiliário, turismo, marcas, publicidade, eventos e conteúdos promocionais.",
+      "hero.p4": "Estou localizado no Porto, mas trabalho em qualquer localização!",
+      "videos.title": "Vídeos em destaque",
+      "videos.v1Title": "Passeios de barco",
+      "videos.v1Text": "Captação aérea com enquadramentos largos, fluidez de movimento e apresentação cinematográfica. Um trabalho de custo simbólico, uma vez que é pago dividido por cada elemento do grupo de participantes no passeio.",
+      "videos.v2Title": "Aulas de Condução de Barco",
+      "videos.v2Text": "Imagens aéreas pensadas para promoção visual, marketing digital e valorização de empresas. Neste caso, um grupo de alunos que quis memorizar as aulas do curso.",
+      "videos.v3Title": "Exploração costeira",
+      "videos.v3Text": "Imagens aéreas junto à costa, ideais para promoção turística, campanhas de marcas e divulgação de experiências no mar.",
+      "videos.v4Title": "Passeio no Douro",
+      "videos.v4Text": "Percursos ao longo do Douro com foco em enquadramentos amplos, movimento suave e destaque para o cenário envolvente.",
+      "gallery.title": "Fotografia aérea",
+      "gallery.g1Title": "Eventos",
+      "gallery.g1Text": "Vista aérea sobre o Porto, captando a dinâmica de eventos e da cidade.",
+      "gallery.g2Title": "Publicidade",
+      "gallery.g2Text": "Litoral e linha de costa pensados para campanhas visuais e spots promocionais.",
+      "gallery.g3Title": "Imobiliário",
+      "gallery.g3Text": "Imóvel e envolvente em destaque, ideais para anúncios e apresentações de imóveis.",
+      "contact.title": "Contacto",
+      "contact.subtitle": "Fala comigo",
+      "contact.text": "Se precisas de vídeo ou fotografia com drone para imobiliário, turismo, empresas ou eventos, envia mensagem e responderei com uma proposta adaptada ao teu projeto.",
+      "contact.formTitle": "Envia a tua mensagem",
+      "contact.formText": "Preenche este formulário com alguns detalhes do teu projeto e recebes a resposta diretamente no teu email.",
+      "contact.name": "Nome",
+      "contact.email": "Email",
+      "contact.message": "Mensagem",
+      "contact.send": "Enviar mensagem"
+    },
+    es: {
+      "nav.about": "Sobre mí",
+      "nav.videos": "Vídeos",
+      "nav.gallery": "Galería",
+      "nav.contact": "Contacto",
+      "nav.portfolio": "Portafolio",
+      "hero.title": "Dron,\nVídeo y\nFotografía aérea profesional",
+      "hero.redText": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
+      "hero.tagline": "Tu aliado para imagen aérea",
+      "hero.sideTitle": "Servicio profesional de dron",
+      "hero.p1": "¡Hola! Mi nombre es Xavier. Trabajo con foco en la calidad visual, movimientos suaves y encuadres potentes para crear vídeos y fotografías aéreas que aportan más valor a tu marca o proyecto.",
+      "hero.p2": "Ya sea para promocionar una propiedad, un alojamiento, un evento, una campaña publicitaria, un paisaje o un paseo en barco, entrego contenidos pensados para llamar la atención y transmitir profesionalidad.",
+      "hero.p3": "Produzco imágenes de dron con impacto visual para inmobiliaria, turismo, marcas, publicidad, eventos y contenidos promocionales.",
+      "hero.p4": "Estoy ubicado en Oporto, pero trabajo en cualquier lugar.",
+      "videos.title": "Vídeos destacados",
+      "videos.v1Title": "Paseos en barco",
+      "videos.v1Text": "Grabación aérea con encuadres amplios, movimientos fluidos y presentación cinematográfica. Un trabajo de coste simbólico, ya que se paga por cada participante del grupo del paseo.",
+      "videos.v2Title": "Clases de conducción de barco",
+      "videos.v2Text": "Imágenes aéreas pensadas para la promoción visual, el marketing digital y la valorización de empresas. En este caso, un grupo de alumnos que quiso recordar sus clases del curso.",
+      "videos.v3Title": "Exploración costera",
+      "videos.v3Text": "Imágenes aéreas junto a la costa, ideales para promoción turística, campañas de marcas y divulgación de experiencias en el mar.",
+      "videos.v4Title": "Paseo por el Duero",
+      "videos.v4Text": "Recorridos a lo largo del Duero con foco en encuadres amplios, movimiento suave y destaque del entorno.",
+      "gallery.title": "Fotografía aérea",
+      "gallery.g1Title": "Eventos",
+      "gallery.g1Text": "Vista aérea de Oporto, captando la dinámica de los eventos y de la ciudad.",
+      "gallery.g2Title": "Publicidad",
+      "gallery.g2Text": "Litoral y línea de costa pensados para campañas visuales y spots promocionales.",
+      "gallery.g3Title": "Inmobiliaria",
+      "gallery.g3Text": "Propiedad y entorno en destaque, ideales para anuncios y presentaciones de inmuebles.",
+      "contact.title": "Contacto",
+      "contact.subtitle": "Habla conmigo",
+      "contact.text": "Si necesitas vídeo o fotografía con dron para inmobiliaria, turismo, empresas o eventos, envía un mensaje y responderé con una propuesta adaptada a tu proyecto.",
+      "contact.formTitle": "Envía tu mensaje",
+      "contact.formText": "Completa este formulario con algunos detalles de tu proyecto y recibirás la respuesta directamente en tu correo.",
+      "contact.name": "Nombre",
+      "contact.email": "Correo electrónico",
+      "contact.message": "Mensaje",
+      "contact.send": "Enviar mensaje"
+    },
+    fr: {
+      "nav.about": "À propos",
+      "nav.videos": "Vidéos",
+      "nav.gallery": "Galerie",
+      "nav.contact": "Contact",
+      "nav.portfolio": "Portfolio",
+      "hero.title": "Drone,\nVidéo et\nPhotographie aérienne professionnelle",
+      "hero.redText": "Je produis des images par drone avec un fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
+      "hero.tagline": "Votre partenaire pour l’image aérienne",
+      "hero.sideTitle": "Service professionnel de drone",
+      "hero.p1": "Bonjour ! Je m’appelle Xavier. Je travaille avec un souci de qualité visuelle, de mouvements fluides et de cadrages forts pour créer des vidéos et des photos aériennes qui valorisent votre marque ou votre projet.",
+      "hero.p2": "Pour la promotion d’un bien immobilier, d’un hébergement, d’un événement, d’une campagne publicitaire, d’un paysage ou d’une balade en bateau, je crée des contenus conçus pour attirer l’attention et transmettre du professionnalisme.",
+      "hero.p3": "Je produis des images par drone à fort impact visuel pour l’immobilier, le tourisme, les marques, la publicité, les événements et les contenus promotionnels.",
+      "hero.p4": "Je suis basé à Porto, mais je travaille partout.",
+      "videos.title": "Vidéos à la une",
+      "videos.v1Title": "Balades en bateau",
+      "videos.v1Text": "Captation aérienne avec cadrages larges, mouvements fluides et présentation cinématographique. Un travail à coût symbolique, partagé entre les participants à la sortie.",
+      "videos.v2Title": "Cours de conduite de bateau",
+      "videos.v2Text": "Images aériennes pensées pour la promotion visuelle, le marketing digital et la valorisation des entreprises. Ici, un groupe d’élèves souhaitait garder un souvenir de leurs cours.",
+      "videos.v3Title": "Exploration côtière",
+      "videos.v3Text": "Images aériennes le long de la côte, idéales pour la promotion touristique, les campagnes de marques et la mise en avant d’expériences en mer.",
+      "videos.v4Title": "Balade sur le Douro",
+      "videos.v4Text": "Parcours le long du Douro con cadrages amples, mouvements doux et mise en valeur du paysage environnant.",
+      "gallery.title": "Photographie aérienne",
+      "gallery.g1Title": "Événements",
+      "gallery.g1Text": "Vue aérienne de Porto, captant la dynamique des événements et de la ville.",
+      "gallery.g2Title": "Publicité",
+      "gallery.g2Text": "Littoral et côte pensés pour des campagnes visuelles et des spots promotionnels.",
+      "gallery.g3Title": "Immobilier",
+      "gallery.g3Text": "Bien et environnement mis en avant, idéals pour les annonces et présentations immobilières.",
+      "contact.title": "Contact",
+      "contact.subtitle": "Contactez-moi",
+      "contact.text": "Si vous avez besoin de vidéo ou de photo par drone pour l’immobilier, le tourisme, les entreprises ou les événements, envoyez-moi un message et je vous répondrai avec une proposition adaptée à votre projet.",
+      "contact.formTitle": "Envoyez votre message",
+      "contact.formText": "Remplissez ce formulaire avec quelques détails sur votre projet et vous recevrez la réponse directement par email.",
+      "contact.name": "Nom",
+      "contact.email": "Email",
+      "contact.message": "Message",
+      "contact.send": "Envoyer le message"
+    },
+    en: {
+      "nav.about": "About",
+      "nav.videos": "Videos",
+      "nav.gallery": "Gallery",
+      "nav.contact": "Contact",
+      "nav.portfolio": "Portfolio",
+      "hero.title": "Drone,\nVideo and\nProfessional aerial photography",
+      "hero.redText": "I create drone images with strong visual impact for real estate, tourism, brands, advertising, events and promotional content.",
+      "hero.tagline": "Your partner for aerial imagery",
+      "hero.sideTitle": "Professional drone service",
+      "hero.p1": "Hello! My name is Xavier. I focus on visual quality, smooth movement and strong framing to create aerial videos and photos that add more value to your brand or project.",
+      "hero.p2": "Whether promoting a property, accommodation, event, advertising job, landscape or boat trip, I deliver content designed to grab attention and convey professionalism.",
+      "hero.p3": "I produce drone images with visual impact for real estate, tourism, brands, advertising, events and promotional content.",
+      "hero.p4": "I’m based in Porto, but I work anywhere.",
+      "videos.title": "Featured videos",
+      "videos.v1Title": "Boat trips",
+      "videos.v1Text": "Aerial capture with wide framing, smooth motion and cinematic presentation. A job at a symbolic cost, as it is paid per person in the group.",
+      "videos.v2Title": "Boat driving lessons",
+      "videos.v2Text": "Aerial footage created for visual promotion, digital marketing and business branding. In this case, a group of students who wanted to remember their course lessons.",
+      "videos.v3Title": "Coastal exploration",
+      "videos.v3Text": "Aerial images along the coast, ideal for tourism promotion, brand campaigns and showcasing sea experiences.",
+      "videos.v4Title": "Douro river tour",
+      "videos.v4Text": "Routes along the Douro with wide framing, smooth movement and an emphasis on the surrounding scenery.",
+      "gallery.title": "Aerial photography",
+      "gallery.g1Title": "Events",
+      "gallery.g1Text": "Aerial view over Porto, capturing the energy of events and the city.",
+      "gallery.g2Title": "Advertising",
+      "gallery.g2Text": "Coastline and seafront tailored for visual campaigns and promotional spots.",
+      "gallery.g3Title": "Real estate",
+      "gallery.g3Text": "Property and surroundings highlighted, ideal for listings and real estate presentations.",
+      "contact.title": "Contact",
+      "contact.subtitle": "Get in touch",
+      "contact.text": "If you need drone video or photography for real estate, tourism, companies or events, send a message and I’ll reply with a proposal tailored to your project.",
+      "contact.formTitle": "Send your message",
+      "contact.formText": "Fill in this form with some details about your project and you’ll receive the reply directly in your inbox.",
+      "contact.name": "Name",
+      "contact.email": "Email",
+      "contact.message": "Message",
+      "contact.send": "Send message"
+    },
+    it: {
+      "nav.about": "Chi sono",
+      "nav.videos": "Video",
+      "nav.gallery": "Galleria",
+      "nav.contact": "Contatto",
+      "nav.portfolio": "Portfolio",
+      "hero.title": "Drone,\nVideo e\nFotografia aerea professionale",
+      "hero.redText": "Realizzo immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
+      "hero.tagline": "Il tuo partner per le immagini aeree",
+      "hero.sideTitle": "Servizio professionale di drone",
+      "hero.p1": "Ciao! Mi chiamo Xavier. Lavoro con attenzione alla qualità visiva, movimenti fluidi e inquadrature forti per creare video e foto aeree che danno più valore al tuo marchio o progetto.",
+      "hero.p2": "Che si tratti di promuovere un immobile, un alloggio, un evento, un lavoro pubblicitario, un paesaggio o un giro in barca, realizzo contenuti pensati per attirare l’attenzione e trasmettere professionalità.",
+      "hero.p3": "Produco immagini con drone ad alto impatto visivo per immobiliare, turismo, marchi, pubblicità, eventi e contenuti promozionali.",
+      "hero.p4": "Sono basato a Porto, ma lavoro ovunque.",
+      "videos.title": "Video in evidenza",
+      "videos.v1Title": "Tour in barca",
+      "videos.v1Text": "Riprese aeree con inquadrature ampie, movimento fluido e presentazione cinematografica. Un lavoro dal costo simbolico, suddiviso tra i partecipanti.",
+      "videos.v2Title": "Lezioni di guida in barca",
+      "videos.v2Text": "Immagini aeree pensate per la promozione visiva, il marketing digitale e la valorizzazione delle aziende. In questo caso, un gruppo di allievi che voleva ricordare le lezioni del corso.",
+      "videos.v3Title": "Esplorazione costiera",
+      "videos.v3Text": "Immagini aeree lungo la costa, ideali per la promozione turistica, campagne di marchi e esperienze in mare.",
+      "videos.v4Title": "Gita sul Douro",
+      "videos.v4Text": "Percorsi lungo il Douro con inquadrature ampie, movimento dolce e attenzione al paesaggio circostante.",
+      "gallery.title": "Fotografia aerea",
+      "gallery.g1Title": "Eventi",
+      "gallery.g1Text": "Vista aerea di Porto, che coglie la dinamica degli eventi e della città.",
+      "gallery.g2Title": "Pubblicità",
+      "gallery.g2Text": "Litorale e costa pensati per campagne visive e spot promozionali.",
+      "gallery.g3Title": "Immobiliare",
+      "gallery.g3Text": "Immobile e dintorni in evidenza, ideali per annunci e presentazioni immobiliari.",
+      "contact.title": "Contatto",
+      "contact.subtitle": "Scrivimi",
+      "contact.text": "Se ti serve video o fotografia con drone per immobiliare, turismo, aziende o eventi, inviami un messaggio e risponderò con una proposta adatta al tuo progetto.",
+      "contact.formTitle": "Invia il tuo messaggio",
+      "contact.formText": "Compila questo modulo con alcuni dettagli del tuo progetto e riceverai la risposta direttamente via email.",
+      "contact.name": "Nome",
+      "contact.email": "Email",
+      "contact.message": "Messaggio",
+      "contact.send": "Invia messaggio"
+    },
+    de: {
+      "nav.about": "Über mich",
+      "nav.videos": "Videos",
+      "nav.gallery": "Galerie",
+      "nav.contact": "Kontakt",
+      "nav.portfolio": "Portfolio",
+      "hero.title": "Drohne,\nVideo und\nProfessionelle Luftfotografie",
+      "hero.redText": "Ich produziere Drohnenaufnahmen mit starkem visuellen Eindruck für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+      "hero.tagline": "Ihr Partner für Luftaufnahmen",
+      "hero.sideTitle": "Professioneller Drohnenservice",
+      "hero.p1": "Hallo! Mein Name ist Xavier. Ich arbeite mit Fokus auf Bildqualität, sanfte Bewegungen und starke Bildausschnitte, um Luftvideos und ‑fotos zu erstellen, die Ihrer Marke oder Ihrem Projekt mehr Wert geben.",
+      "hero.p2": "Ob zur Bewerbung einer Immobilie, einer Unterkunft, einer Veranstaltung, eines Werbeprojekts, einer Landschaft oder einer Bootsfahrt – ich liefere Inhalte, die Aufmerksamkeit wecken und Professionalität vermitteln.",
+      "hero.p3": "Ich produziere Drohnenbilder mit starkem visuellen Impact für Immobilien, Tourismus, Marken, Werbung, Events und Promotion‑Inhalte.",
+      "hero.p4": "Ich sitze in Porto, arbeite aber überall.",
+      "videos.title": "Ausgewählte Videos",
+      "videos.v1Title": "Bootstouren",
+      "videos.v1Text": "Luftaufnahmen mit weiten Bildausschnitten, sanften Bewegungen und filmischer Präsentation. Eine Arbeit zu symbolischen Kosten, bezahlt pro Teilnehmer der Tour.",
+      "videos.v2Title": "Bootsführerscheinkurse",
+      "videos.v2Text": "Luftaufnahmen für visuelle Promotion, digitales Marketing und Unternehmensauftritt. Hier eine Gruppe von Schülern, die ihre Kurse festhalten wollte.",
+      "videos.v3Title": "Küsten‑Erkundung",
+      "videos.v3Text": "Luftaufnahmen entlang der Küste – ideal für touristische Promotion, Markenkampagnen und Meer‑Erlebnisse.",
+      "videos.v4Title": "Douro‑Rundfahrt",
+      "videos.v4Text": "Routen entlang des Douro mit weiten Bildausschnitten, sanften Bewegungen und Fokus auf die Umgebung.",
+      "gallery.title": "Luftfotografie",
+      "gallery.g1Title": "Events",
+      "gallery.g1Text": "Luftaufnahme über Porto, die die Dynamik von Events und der Stadt einfängt.",
+      "gallery.g2Title": "Werbung",
+      "gallery.g2Text": "Küste und Uferlinie – optimiert für visuelle Kampagnen und Werbespots.",
+      "gallery.g3Title": "Immobilien",
+      "gallery.g3Text": "Immobilie und Umgebung im Fokus, ideal für Exposés und Präsentationen.",
+      "contact.title": "Kontakt",
+      "contact.subtitle": "Schreib mir",
+      "contact.text": "Wenn Sie Drohnen‑Video oder ‑Fotografie für Immobilien, Tourismus, Unternehmen oder Events benötigen, senden Sie mir eine Nachricht – ich antworte mit einem Angebot, das zu Ihrem Projekt passt.",
+      "contact.formTitle": "Nachricht senden",
+      "contact.formText": "Füllen Sie dieses Formular mit einigen Details zu Ihrem Projekt aus, und Sie erhalten die Antwort direkt per E‑Mail.",
+      "contact.name": "Name",
+      "contact.email": "E‑Mail",
+      "contact.message": "Nachricht",
+      "contact.send": "Nachricht senden"
     }
+  };
 
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const lang = btn.getAttribute("data-lang");
-        applyTranslations(lang);
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations["pt"];
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (!dict[key]) return;
+      if (key === "hero.title") {
+        const parts = dict[key].split("\n");
+        el.innerHTML = parts.map(p => `<span>${p}</span>`).join("");
+      } else {
+        el.innerHTML = dict[key];
+      }
+    });
+    document.documentElement.lang = lang;
+  }
 
-        document.querySelectorAll(".lang-btn").forEach(b => {
-          b.classList.toggle("active", b === btn);
-        });
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      applyTranslations(lang);
+      document.querySelectorAll(".lang-btn").forEach(b => {
+        b.classList.toggle("active", b === btn);
       });
     });
+  });
 
-    applyTranslations("pt");
+  applyTranslations("pt");
 
-    const vTrack = document.querySelector(".videos-track");
-    const vSlides = Array.from(document.querySelectorAll(".video-slide"));
-    const vPrev = document.querySelector(".carousel-arrow.left");
-    const vNext = document.querySelector(".carousel-arrow.right");
-    let vIndex = 0;
+  const vTrack = document.querySelector(".videos-track");
+  const vSlides = Array.from(document.querySelectorAll(".video-slide"));
+  const vPrev = document.querySelector(".carousel-arrow.left");
+  const vNext = document.querySelector(".carousel-arrow.right");
+  let vIndex = 0;
 
-    function stopAllVideos() {
-      const iframes = document.querySelectorAll(".video-wrap iframe");
-      iframes.forEach(iframe => {
-        const src = iframe.getAttribute("src");
-        iframe.setAttribute("src", src);
-      });
+  function stopAllVideos() {
+    const iframes = document.querySelectorAll(".video-wrap iframe");
+    iframes.forEach(iframe => {
+      const src = iframe.getAttribute("src");
+      iframe.setAttribute("src", src);
+    });
+  }
+
+  function updateVideoCarousel() {
+    const offset = -vIndex * 100;
+    if (vTrack) {
+      vTrack.style.transform = `translateX(${offset}%)`;
     }
+  }
 
-    function updateVideoCarousel() {
-      const offset = -vIndex * 100;
-      if (vTrack) {
-        vTrack.style.transform = `translateX(${offset}%)`;
-      }
+  if (vPrev && vNext && vTrack && vSlides.length > 0) {
+    vPrev.addEventListener("click", () => {
+      stopAllVideos();
+      vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
+      updateVideoCarousel();
+    });
+
+    vNext.addEventListener("click", () => {
+      stopAllVideos();
+      vIndex = (vIndex + 1) % vSlides.length;
+      updateVideoCarousel();
+    });
+  }
+
+  const gTrack = document.querySelector(".gallery-track");
+  const gSlides = Array.from(document.querySelectorAll(".gallery-slide"));
+  const gPrev = document.querySelector(".gallery-left");
+  const gNext = document.querySelector(".gallery-right");
+  let gIndex = 0;
+
+  function updateGalleryCarousel() {
+    const offset = -gIndex * 100;
+    if (gTrack) {
+      gTrack.style.transform = `translateX(${offset}%)`;
     }
+  }
 
-    if (vPrev && vNext && vTrack && vSlides.length > 0) {
-      vPrev.addEventListener("click", () => {
-        stopAllVideos();
-        vIndex = (vIndex - 1 + vSlides.length) % vSlides.length;
-        updateVideoCarousel();
-      });
+  if (gPrev && gNext && gTrack && gSlides.length > 0) {
+    gPrev.addEventListener("click", () => {
+      gIndex = (gIndex - 1 + gSlides.length) % gSlides.length;
+      updateGalleryCarousel();
+    });
 
-      vNext.addEventListener("click", () => {
-        stopAllVideos();
-        vIndex = (vIndex + 1) % vSlides.length;
-        updateVideoCarousel();
-      });
-    }
-
-    const gTrack = document.querySelector(".gallery-track");
-    const gSlides = Array.from(document.querySelectorAll(".gallery-slide"));
-    const gPrev = document.querySelector(".gallery-left");
-    const gNext = document.querySelector(".gallery-right");
-    let gIndex = 0;
-
-    function updateGalleryCarousel() {
-      const offset = -gIndex * 100;
-      if (gTrack) {
-        gTrack.style.transform = `translateX(${offset}%)`;
-      }
-    }
-
-    if (gPrev && gNext && gTrack && gSlides.length > 0) {
-      gPrev.addEventListener("click", () => {
-        gIndex = (gIndex - 1 + gSlides.length) % gSlides.length;
-        updateGalleryCarousel();
-      });
-
-      gNext.addEventListener("click", () => {
-        gIndex = (gIndex + 1) % gSlides.length;
-        updateGalleryCarousel();
-      });
-    }
-  </script>
+    gNext.addEventListener("click", () => {
+      gIndex = (gIndex + 1) % gSlides.length;
+      updateGalleryCarousel();
+    });
+  }
+</script>
 </body>
 </html>
